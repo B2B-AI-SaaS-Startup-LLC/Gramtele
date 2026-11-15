@@ -72,7 +72,7 @@ def classify(stem,ext,line,m,name):
   test='mtproto_part_order_unknown_size_partial_resume_and_failure'
   rust='MtpFileLoader::'+snake(m)
   if m in ['mtpFileLoader','~mtpFileLoader']:
-   status='partial(3/4 download_manager_mtproto;29 Session binding)';rust='MtpFileLoader::new/create_file_loader';note='constructor projections complete; actual DownloadMtprotoTask owner/sessions are excluded from this task'
+   status='partial(29 Session binding)';rust='MtpFileLoader::new/create_file_loader + download_manager_mtproto::DownloadMtprotoTask';note='storage-transfer closes task owner/DC queues/CDN/Sender; actual Session lifetime dispatch remains29'
   if m in ['cacheKey','fileLocationKey']:module='file_download';rust='create_file_loader + existing DownloadLocation::cache_key';test='loader_factory_selection_overrides_and_memory_start'
   if m=='cancelHook':rust='MtpFileLoader::cancel + CancelAllRequests effect'
  if stem=='streamed_file_downloader':
@@ -99,7 +99,7 @@ def classify(stem,ext,line,m,name):
   if m in ['url','requestType','streamLoading','currentOffset','loadProgress','loadFinished','loadFailed','cancelHook','cancelRequest','startLoading','cacheKey','fileLocationKey']:
    rust='WebFileLoader::new/start_loading/apply_update/cancel_request/close + FileLoader cache_key';test='web_loader_streams_to_real_file_detaches_and_ignores_late_updates'
  return status,module,rust,test,note
-lines=['# Storage serialization and file downloads','', 'Original read-only `0f2a31bb420de98f331990432265b131b8d836b5`.', 'Each header declaration and body is listed separately; cpp-local class methods are included.', 'Partial rows name their future package; their test proves only the implemented boundary.', 'Network/CDN/reference refresh in excluded download_manager_mtproto is not claimed tested.', 'Native capture:235 rows, including exact Qt stream expressions and the complete real archive writer.', '', '| Original | Function | Status/future package | Rust | Test/evidence |', '|---|---|---|---|---|']
+lines=['# Storage serialization and file downloads','', 'Original read-only `0f2a31bb420de98f331990432265b131b8d836b5`.', 'Each header declaration and body is listed separately; cpp-local class methods are included.', 'Partial rows name their future package; their test proves only the implemented boundary.', 'Superseded manager boundary: storage-transfer-map.md now covers actual DC queues/CDN/reference refresh/Sender; concrete Session binding remains29.', 'Native capture:235 rows, including exact Qt stream expressions and the complete real archive writer.', '', '| Original | Function | Status/future package | Rust | Test/evidence |', '|---|---|---|---|---|']
 counts={}
 for stem,ext,num,m,name in rows:
  status,module,rust,test,note=classify(stem,ext,num,m,name)

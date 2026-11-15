@@ -1,5 +1,5 @@
 //! mtpFileLoader's own state. DownloadMtprotoTask transport, CDN validation,
-//! reference refresh and shared priorities belong to download_manager_mtproto3/4.
+//! reference refresh and shared priorities live in download_manager_mtproto.
 //! The owner feeds real haveSentRequests after removing a completed request.
 use super::file_download::{FailureReason, FileLoader};
 use crate::data::{data_file_origin::FileOrigin, data_image_location::DownloadLocation};
@@ -35,7 +35,6 @@ impl MtpFileLoader {
     pub fn obj_id(&self) -> u64 {
         match &self.location {
             DownloadLocation::Storage(s) => s.id,
-            DownloadLocation::AudioAlbumThumb { document_id } => *document_id,
             _ => 0,
         }
     }

@@ -1,0 +1,6 @@
+{
+  "SourceFiles/storage/download_manager_mtproto.h": "ca755d2815d8c3e4e98e09f9dacfc6016956e44e0ee9e90cb94f34d9f4409458",
+  "SourceFiles/storage/download_manager_mtproto.cpp": "a2b6a697ebd564e82a3e31284fec4744371c2cdc1a2102fde2dd797a5a811f7e",
+  "SourceFiles/storage/file_upload.h": "bdfdaa42a0d5c615e4c91e4331f918e12e88b45ef898a419adf512fa77e2ee1e",
+  "SourceFiles/storage/file_upload.cpp": "358640730d701904a4d0517272f32cf24901debc578f0796f1b10cec39786c52"
+}

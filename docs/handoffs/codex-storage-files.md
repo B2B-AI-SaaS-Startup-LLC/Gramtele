@@ -141,3 +141,9 @@ workspace run follows that fix. The descriptor-mode unit test checks real I/O.
 PROGRESS/ledger/map/parallel/handoff updated before commit/report. Integrate only
 this branch, push main+port/storage-files atomically without force. CI is left to
 the user; known tg-runtime thread-drop race is not modified.
+
+Superseding manager boundary (storage-transfer): see
+[codex-storage-transfer](codex-storage-transfer.md). Real DownloadMtprotoTask/MTP
+loader ownership, DC queues/balancing, references/CDN and typed Sender adapters
+are now implemented. Ten map constructor/destructor rows retain only concrete
+Session29 binding, not missing manager3/4. Other explicit partials above remain.

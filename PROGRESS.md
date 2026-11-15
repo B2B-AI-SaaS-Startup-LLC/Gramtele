@@ -1779,8 +1779,9 @@ peer/document write expressions + actual legacy document header read phase;
 whole Session/model classes are own tests+reading, not native proof.
 
 Partial02/29 full users/PeerCodec;04/16 String/Vec Qt-nullness provenance (wire DTO
-roundtrip exact, convenience model snapshots normalize nullness);3/4 excluded
-DownloadMtprotoTask/manager balancing/retry/FILE_REFERENCE_EXPIRED/CDN;29 owner
+roundtrip exact, convenience model snapshots normalize nullness); прежний3/4
+DownloadMtprotoTask/manager balancing/retry/FILE_REFERENCE_EXPIRED/CDN закрыт
+ниже в storage-transfer, остаётся только Session binding29;29 owner
 future pump/MainRef/lifetimes/postprocess/localstorage effects;7 streaming Reader;
 5 pixels/PreparedFile;33 full QUrl/codepage and non-Unix dates. No fake requests/
 models. Source document reserve underestimate, flag truncation, duplicate-part
@@ -1800,3 +1801,37 @@ projected current Document writer and full original ZIP writer;17sourcehashes,
 map310/227done83partial refs and unchanged lock package versions audited.
 Known runtime race passed; tg-runtime untouched. CI left to user.
 Claude/runtime/foreign files and explicitly excluded next-part sources unchanged.
+
+## Storage transfer — download manager / uploader (port/storage-transfer)
+
+База141b422, новый свой worktree storage-transfer.4 originals2837LOC прочитаны;
+ledger4partial с конкретными владельцами26/29/18–20/3/4/5/7, без fake моделей.
+[Карта](crates/tg-core/docs/storage-transfer-map.md):248rows212done36partial0pending;
+[handoff](docs/handoffs/codex-storage-transfer.md). Каждый partial имеет адрес и тест.
+DC priority/LIFO/generation/window/session balancing, cancellation/timeouts/stopping;
+реальный MtpFileLoader+FileLoader, FILE_REFERENCE refresh, CDN redirect/reupload/
+hashes/AES-CTR/SHA256, hash-query recovery при удалении сессии. Uploader части/
+big-small/MD5/TL/параллельность/pacing/отмена/preparation queues/видеокавер;
+настоящие Sender/Instance retry/migration/notices. Реальные PhotoData/DocumentData
+upload-state adapters; RPL после borrow, callback continuations до следующей мутации.
+
+Native76exact rows дважды:63 CDN hashes +13 part-layout incl ushort truncation;
+4source hashes. Остальные машины own tests+чтение: целые C++ классы не собраны без
+настоящих Session/ApiWrap/History/images/encode, тела не подменялись.26 новых тестов,
+время виртуальное, без сети/sleep/user tdata. Source raw download shift16+index,
+sliced resend part0, ushort wrap, hash limit/first-wins, capacity boundaries сохранены.
+Старый partial3/4 manager/CDN в storage-files закрыт;10 строк карты теперь только
+Session29 (итог прежней карты310/227/83). Остатки: реальный bootstrap/weak lifecycle29,
+reference ApiWrap26, History/send options18–20/26, FilePrepareResult/cache/pixels5,
+worker archive/encode3/4/5/7. localimageloader/media_prepare и Claude не тронуты.
+Новых зависимостей/manifest/lock/unsafe нет. Детали и протокол effects в handoff.
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:994 successful (990 regular +4
+isolated child results),0failed,3existingignored.26 new integration tests. One
+completed final workspace run: /tmp/storage-transfer-final-workspace-checks.log.
+An earlier attempt stopped during clippy before any tests for the final Source
+Queue generation invariant (-1); final checks include that assertion/test update.
+Native76 repeated identical/4source hashes, map248/212done36partial test refs and
+ledger4partial, unchanged dependencies/lock, diff --check PASS. Known runtime race
+passed locally; tg-runtime untouched. Accounting updated before commit/report.
+CI monitoring/restarts are left to the user as requested.

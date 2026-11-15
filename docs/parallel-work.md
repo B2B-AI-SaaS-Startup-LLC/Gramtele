@@ -204,8 +204,8 @@ force. CI пользователь смотрит/перезапускает с�
 owners; raw wire codecs/real store apply and file/archive/download state complete
 within their documented boundaries. Native235repeat rows/full original ZIP bytes,
 17hashes,31newtests. Actual libc/reqwest/minizip; no new lock packages/versions.
-No fake Session/UserData/Reader/server/CDN requests. FILE_REFERENCE_EXPIRED/CDN
-and balancing live in explicitly excluded download_manager_mtproto; future3/4.
+No fake Session/UserData/Reader/server/CDN requests. Former FILE_REFERENCE_EXPIRED/
+CDN/balancing boundary3/4 is superseded by storage-transfer below; Session29 remains.
 String/Vec model snapshots lack erased Qt nullness provenance04/16; exact nullable
 wire records preserved and tested, model-snapshot byte identity not overclaimed.
 Claude lang/countries/credits/tg-ui/codegen/runtime/mtproto and foreign worktrees/
@@ -220,3 +220,24 @@ before any tests to fix QFile open modes; final checks include the fix.31newtest
 projected current Document writer and full original ZIP writer;17sourcehashes,
 map310/227done83partial refs and unchanged lock package versions audited.
 Known runtime race passed; tg-runtime untouched. CI left to user.
+
+Срез port/storage-transfer от main141b422, отдельный worktree storage-transfer:
+[handoff](handoffs/codex-storage-transfer.md),
+[карта](../crates/tg-core/docs/storage-transfer-map.md)248rows212done36explicitpartial.
+4requestedfiles2837LOC remainpartial for actual Session/ApiWrap/History/UI/worker
+owners; DC queues/balancing/retries/CDN/uploader transfer phases and actual typed
+Sender adapters complete.26newtests,76native rows repeated/4source hashes.
+Previous storage-files manager3/4 boundaries closed; actual Session lifetime29
+remains (map310/227/83). No fake requests/models or new dependencies/lock changes.
+Claude/runtime/mtproto and foreign worktrees untouched; localimageloader/media_prepare
+excluded. Integrate only own branch after checks, push main+branch without force.
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:994 successful (990 regular +4
+isolated child results),0failed,3existingignored.26 new integration tests. One
+completed final workspace run: /tmp/storage-transfer-final-workspace-checks.log.
+An earlier attempt stopped during clippy before any tests for the final Source
+Queue generation invariant (-1); final checks include that assertion/test update.
+Native76 repeated identical/4source hashes, map248/212done36partial test refs and
+ledger4partial, unchanged dependencies/lock, diff --check PASS. Known runtime race
+passed locally; tg-runtime untouched. Accounting updated before commit/report.
+CI monitoring/restarts are left to the user as requested.

@@ -1775,7 +1775,9 @@ dependencies = [
 name = "tg-core"
 version = "0.0.0"
 dependencies = [
+ "libc",
  "md-5",
+ "reqwest",
  "serde_json",
  "tg-base",
  "tg-cache",

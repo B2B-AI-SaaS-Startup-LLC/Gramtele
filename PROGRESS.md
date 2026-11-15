@@ -1758,3 +1758,45 @@ clippy/tests also passed. Native391 JSON cases/295 key pairs repeated identicall
 22 source hashes/map refs/package-version audit/diff --check PASS. Known runtime
 race passed locally; runtime untouched. Accounting updated before commit/report.
 CI monitoring/restarts are left to the user as explicitly requested.
+
+## Storage serialization + file downloads (port/storage-files)
+
+База90d53cd, свой worktree storage-files;14 originals3491LOC. Все14 files partial:
+wire codecs и машины состояний перенесены; реальные UserData/nullable-model/Session/
+network owner/UI/platform adapters остаются по адресам ниже.
+[Карта](crates/tg-core/docs/storage-files-map.md):310rows227done83partial0pending;
+[handoff](docs/handoffs/codex-storage-files.md).17 source hashes.
+
+Qt_5_1 peer/document/image-location raw nullable UTF16/bytes codecs, legacy gates,
+creator/flags/lastseen/peekPhone; real Chat/Channel and Documents application.
+FileLoader real file/cache/partial/out-of-order/cancel/finalization + phased RPL,
+factory/memory ownership; MTP128KiB state, streamed32-part window; web8-query/
+200ms generation/redirect/status/size/cancel state and actual reqwest async transport
+on caller runtime. Archive real minizip FFI, gather/names/progress/cancel/limits/
+stale deletion. No user tdata/session/display or real network tests.
+Native235exact rows twice incl full original ZIP writer byte equality, current
+peer/document write expressions + actual legacy document header read phase;
+whole Session/model classes are own tests+reading, not native proof.
+
+Partial02/29 full users/PeerCodec;04/16 String/Vec Qt-nullness provenance (wire DTO
+roundtrip exact, convenience model snapshots normalize nullness);3/4 excluded
+DownloadMtprotoTask/manager balancing/retry/FILE_REFERENCE_EXPIRED/CDN;29 owner
+future pump/MainRef/lifetimes/postprocess/localstorage effects;7 streaming Reader;
+5 pixels/PreparedFile;33 full QUrl/codepage and non-Unix dates. No fake requests/
+models. Source document reserve underestimate, flag truncation, duplicate-part
+accounting, web/ZIP limit quirks preserved; safe corruption refusal and remaining
+normalization/scheduling differences in handoff. Snapshot model→wire is explicitly
+not claimed byte-exact for Qt null/empty states erased by existing models.
+
+Direct libc/reqwest reuse lock, no package upgrades. Original minizip added to
+Nix shell/CI. Only audited minizip/localtime FFI allows unsafe inside tg-core.
+31newtests=29integration+2ABI/open-mode. nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:968 successful (964 regular +4
+isolated child results),0failed,3existingignored. One completed full final run:
+/tmp/storage-files-final-workspace-checks.log. Earlier test compilation interrupted
+before any tests to fix QFile open modes; final checks include the fix.31newtests
+(29integration+2ABI/open-mode units). Native235 repeated identical including whole
+projected current Document writer and full original ZIP writer;17sourcehashes,
+map310/227done83partial refs and unchanged lock package versions audited.
+Known runtime race passed; tg-runtime untouched. CI left to user.
+Claude/runtime/foreign files and explicitly excluded next-part sources unchanged.

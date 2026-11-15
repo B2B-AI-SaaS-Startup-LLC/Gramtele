@@ -515,3 +515,30 @@ fn quality_of(records: &BTreeMap<DocumentRecordKey, DocumentData>, key: Document
         .expect("video quality document not owned")
         .resolve_video_quality(|other| quality_of(records, other))
 }
+
+impl Documents {
+    /// Serialize::Document::readFromStream's real owner phase. All decoding and
+    /// validation precede the first model mutation; no store borrow crosses fire.
+    pub fn apply_serialized_document(
+        &self,
+        record: &crate::storage::serialize_document::DocumentRecord,
+        info: Option<&crate::storage::serialize_document::StickerSetInfo>,
+        database: &impl MimeDatabase,
+    ) -> Option<DocumentRecordKey> {
+        record.attributes(info)?;
+        crate::storage::serialize_peer::text(&record.mime)?;
+        record.thumbnail.location()?;
+        record.video_thumbnail.location()?;
+        let key = self.ensure_document(record.id);
+        let effects = self.edit(key, |document| {
+            record.apply_to_document(document, info, database, self.files.as_ref())
+        })?;
+        self.dispatch(
+            effects
+                .into_iter()
+                .map(|effect| MediaEvent::Document { key, effect })
+                .collect(),
+        );
+        Some(key)
+    }
+}

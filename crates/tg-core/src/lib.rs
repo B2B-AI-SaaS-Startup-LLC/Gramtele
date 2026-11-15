@@ -1,5 +1,6 @@
 //! Порт: Telegram/SourceFiles/{storage,main,data,api,core,lang,countries} и корневые apiwrap/config/settings/logs/stdafx, history/history*, history_item* оригинала AyuGramDesktop.
-#![forbid(unsafe_code)]
+// Unsafe is restricted to reviewed minizip/local-time FFI modules.
+#![deny(unsafe_code)]
 pub mod data;
 #[path = "main/mod.rs"]
 pub mod main;

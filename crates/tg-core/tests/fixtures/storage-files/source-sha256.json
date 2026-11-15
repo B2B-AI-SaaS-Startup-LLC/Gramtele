@@ -1,0 +1,19 @@
+{
+  "SourceFiles/storage/serialize_peer.h": "3cf9fb7713cd32e5171a80927336e3651bbc141ad9947dee47ad13258a1c5a48",
+  "SourceFiles/storage/serialize_peer.cpp": "9a308597dea544022e947ea01fe87f54b07273420d20533ee29be4056184d2ad",
+  "SourceFiles/storage/serialize_document.h": "1d45cf6873e507751f4599f203b0146bdefec93cb22f8a654d880de1c9935926",
+  "SourceFiles/storage/serialize_document.cpp": "2c40deb2815a6d5c6b7307e531665cb73791e292e4a9468d4304aeec504bb34e",
+  "SourceFiles/storage/storage_folder_archive.h": "bf35b5097035b8ab953bcd28a5d39f55a9cf1b7ac028e4ec96cac8dfe40eaec3",
+  "SourceFiles/storage/storage_folder_archive.cpp": "555d402bc1198f08de94b1f2eab7f7639e149a187128dd930b045b5b131183c4",
+  "SourceFiles/storage/file_download.h": "c2d4ee0fd00c35fe116bb1df3354285ffbc716ec0de44ff702266bf1ffc1bdd1",
+  "SourceFiles/storage/file_download.cpp": "ddc08aaf64288853053198c8b13f609f06c5e4413f0649200f4edba25e323648",
+  "SourceFiles/storage/file_download_mtproto.h": "68f0f7882cac672ad1baad736ac9c49db9c7991c95d87d72e844bef2d8d400c6",
+  "SourceFiles/storage/file_download_mtproto.cpp": "fc1914984749240559854ab8f1eb7c347c210253e686a22e1c7c26426e18d396",
+  "SourceFiles/storage/file_download_web.h": "be6848916f9e2526b731538e2297d0a01ddd1ddfb8b5c12308babb50dfe4da95",
+  "SourceFiles/storage/file_download_web.cpp": "24e382620420c4999b49a22ce36f4b9eea1745d0fbe3450d2aef3951b9179f11",
+  "SourceFiles/storage/streamed_file_downloader.h": "6c49f2d0d66720c45534345c128ce490bf01474f8673ff551be2839655835184",
+  "SourceFiles/storage/streamed_file_downloader.cpp": "a5847debb115e401efd5d561ee76a8015e3c87c545ce5d3d9706ebdebde67f16",
+  "SourceFiles/ui/image/image_location.cpp": "9b1f9cb95ee2ad50ac07ca69ad77b70336667212393a90d0cf1a16e876206756",
+  "SourceFiles/ui/image/image_location.h": "01466d211b124b147034f8b5f92cd60088dd87e7d493d7e8494003cf2f31e9fb",
+  "SourceFiles/storage/download_manager_mtproto.h": "ca755d2815d8c3e4e98e09f9dacfc6016956e44e0ee9e90cb94f34d9f4409458"
+}

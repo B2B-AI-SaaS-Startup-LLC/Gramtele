@@ -196,3 +196,27 @@ race passed locally; runtime untouched. Accounting updated before commit/report.
 CI monitoring/restarts are left to the user as explicitly requested.
 Интеграция только своей ветки после проверок, main+port/base-linux gramtele без
 force. CI пользователь смотрит/перезапускает сам; известный runtime race не чинить.
+
+Срез port/storage-files от main90d53cd, отдельный worktree storage-files:
+[handoff](handoffs/codex-storage-files.md),
+[карта](../crates/tg-core/docs/storage-files-map.md)310rows227done83explicitpartial.
+14requestedfiles3491LOC allpartial at file level for concrete02/04/16/29/33/5/7
+owners; raw wire codecs/real store apply and file/archive/download state complete
+within their documented boundaries. Native235repeat rows/full original ZIP bytes,
+17hashes,31newtests. Actual libc/reqwest/minizip; no new lock packages/versions.
+No fake Session/UserData/Reader/server/CDN requests. FILE_REFERENCE_EXPIRED/CDN
+and balancing live in explicitly excluded download_manager_mtproto; future3/4.
+String/Vec model snapshots lack erased Qt nullness provenance04/16; exact nullable
+wire records preserved and tested, model-snapshot byte identity not overclaimed.
+Claude lang/countries/credits/tg-ui/codegen/runtime/mtproto and foreign worktrees/
+branches untouched. file_upload/download_manager/localimageloader/media_prepare
+not ported; integrate only this branch after checks, atomic push main+branch
+without force. nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:968 successful (964 regular +4
+isolated child results),0failed,3existingignored. One completed full final run:
+/tmp/storage-files-final-workspace-checks.log. Earlier test compilation interrupted
+before any tests to fix QFile open modes; final checks include the fix.31newtests
+(29integration+2ABI/open-mode units). Native235 repeated identical including whole
+projected current Document writer and full original ZIP writer;17sourcehashes,
+map310/227done83partial refs and unchanged lock package versions audited.
+Known runtime race passed; tg-runtime untouched. CI left to user.

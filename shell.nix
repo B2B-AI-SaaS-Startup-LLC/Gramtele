@@ -7,5 +7,5 @@
   }) { } }:
 pkgs.mkShell {
   LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [ pkgs.libxcb pkgs.libxcb-keysyms ];
-  packages = with pkgs; [ cargo rustc clippy rustfmt gcc pkg-config dbus xorg-server libxcb libxcb-keysyms ];
+  packages = with pkgs; [ minizip cargo rustc clippy rustfmt gcc pkg-config dbus xorg-server libxcb libxcb-keysyms ];
 }

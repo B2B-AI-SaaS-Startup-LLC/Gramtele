@@ -20,6 +20,7 @@ impl PrivateX11 {
                 "-nolisten",
                 "tcp",
                 "-ac",
+                "-noreset",
             ])
             .env_remove("DISPLAY")
             .stdout(Stdio::piped())

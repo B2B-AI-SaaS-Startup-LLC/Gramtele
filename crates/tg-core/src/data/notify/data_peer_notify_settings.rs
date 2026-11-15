@@ -1,6 +1,6 @@
 //! Peer notification value model; no storage-settings/localstorage code is used.
 use tg_scheme as tl;
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord)]
 #[repr(u8)]
 pub enum DefaultNotify {
     User,

@@ -1,0 +1,19 @@
+{
+  "data/data_group_call.cpp": "01203c425b536c608983753abdbaf591506827d0f66b3abe0e6a39ec00ea4f8f",
+  "data/data_group_call.h": "93ef171084f33d4309725e0d9b0559cfe3f7d433e2d5aecb74f72a9f67b782e3",
+  "data/data_media_preload.cpp": "9b047d4eeafb0554de8648a3ca4a537b1c0ae5090c77327f98e08fc562868530",
+  "data/data_media_preload.h": "00d9d463f5ea26c4b7a31c55b23c0d95346cc20a7e84784cc13c453ec4367a7a",
+  "data/data_statistics_chart.cpp": "6daf44f8909b4f9850a816d0df4e5033299eecf43908eb7253eee9bd54954b7d",
+  "data/data_statistics_chart.h": "ee200445925bdabcbcbf639571fa8672c85020b080788898849dac86a024bd55",
+  "data/notify/data_notify_settings.cpp": "78e28fd37c32d805bb79049d471c79a279e43386b28d609a5aef80d1a0128bcc",
+  "data/notify/data_notify_settings.h": "2cfde1492bf86c80d88ded9b980a8c11336c09978b4ef3e280e44a7f3dac6c61",
+  "data/raw/raw_countries_bounds.cpp": "f3fc403ea1e9790e26018a24856657fbc2142c9a0539c6776e694c89d0592ef4",
+  "data/raw/raw_countries_bounds.h": "de75ec28ed22c6a3dd2468cb3a215a6308ef3bebd76ced9ed624713c38b83a33",
+  "media/streaming/media_streaming_loader.h": "f2e477acc06024d5223ad9669f18d885c12b38e7cc09d80247bff9436f048fab",
+  "media/streaming/media_streaming_reader.cpp": "a4263ac6fc4ac438d3d7fdabaca83b4363eadf0d3943037d93d46596684babc5",
+  "statistics/segment_tree.cpp": "4cae3376245e54ef487b3d87b7fcb02c7b535baf9eebda69c7fb8e5a6ca46617",
+  "statistics/segment_tree.h": "3b629b3585bcc696db73ea14cea5677cfc31eca41be38114060d54ad41bacd0b",
+  "statistics/statistics_data_deserialize.cpp": "7751266cb08be5a48176c5e8b2f71d8895c5fe6e844cada2585abcd3dfac5ee9",
+  "statistics/statistics_data_deserialize.h": "8cad3a05b2acdf1d2e2cc4ee04f6b7017ba404d0ae17b664a4796644666f8127",
+  "ui/text/format_values.h": "d570550a2e84396456f5f618b59f55b5bd234e0b23b085f8110989530b6dec98"
+}

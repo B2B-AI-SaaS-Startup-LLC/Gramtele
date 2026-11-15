@@ -56,3 +56,10 @@ pub mod data_user_names;
 pub mod data_user_photos;
 pub mod notify;
 pub mod stickers;
+
+pub mod data_statistics_chart;
+pub mod raw;
+
+pub mod data_group_call;
+
+pub mod data_media_preload;

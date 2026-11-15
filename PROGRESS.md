@@ -1,5 +1,42 @@
 # Прогресс
 
+## port/data-calls-notify — GroupCall / NotifySettings / preload / графики
+
+Своя ветка от main2f58312. Все10 целевых файлов/3170 строк прочитаны;
+GroupCall model/TL/participants/min-volume/SSRC/speaking/version queue/reloads,
+NotifySettings defaults/наследование/unknown/mute timers/exceptions/ringtone leases,
+конкретные Sender bridges и required owner effects; Photo/VideoPreload state,
+реальные Peers/Photos/Documents/typed keys. Raw country table173 entries полностью.
+Actual chart JSON parser находится в statistics/statistics_data_deserialize;
+перенесён вместе с полным SegmentTree как нужные зависимости, ledger→tg-core4.
+
+Карта data-calls-notify-map.md:376 строк,343 done/33 partial/0 pending.
+Целевые10 ledger:2 done/8 partial. SegmentTree2 done, JSON parser2 partial5.
+Остатки: реальный Calls engine9/registry13/29, ApiWrap26/Session29, Topic08/History18,
+Window notifications5, DownloadMtprotoTask/cache callback delivery/storage loaders3/4,
+QColor/colorDark/labels/local-time/font metrics/pixels5. Только их data-фаза и
+точные effect-контракты покрыты; fake Session/History/loader/UI типов нет.
+Calls video helpers/API notify request subset/streaming serialization helper
+учтены partial для полных исходных файлов (9/26/3–4), не присвоены целиком.
+
+Native400 строк,17 исходных SHA256, два identical captures:173 country/120 tree/
+42 indices/30 JSON+31 lines/4parts framing. Полный GroupCall state/порядок,
+Notify service/Session/preload scheduler — own tests+чтение; четыре honest full-cpp
+probe требуют generated emoji.h. Цвета/labels UI5 не объявлены native-proven.
+Сохранены source early video completion, count absent-left, SSRC collision,
+peer1/default-request collision, request latches, extrema/nonfinite chart quirks,
+исходные неверно названные Lat/Lon. Pointer/unordered iteration→typed-key order —
+явная граница. Подробности: docs/handoffs/codex-data-calls-notify.md.
+
+25 новых tests. serde_json1 добавлен по PLAN, уже существовал в lock;
+версии зависимостей не менялись. Claude scope/чужие ветки не тронуты.
+Финальный единственный workspace-прогон: fmt --check PASS, clippy --workspace
+--all-targets -- -D warnings PASS, test --workspace PASS:893 успешных результата
+(892+1 child),0failed/3existingignored; tg-core248 с4 doctests. Known runtime race
+не проявилась. Native repeated/hash/maprefs/diff --check PASS. Интеграция только
+своей ветки fast-forward в main, атомарный push main+ветка gramtele без force.
+
+
 ## port/data-media — модели фото/документов, пакет 04
 
 PhotoData/DocumentData model phases, все attributes, TL metadata apply,

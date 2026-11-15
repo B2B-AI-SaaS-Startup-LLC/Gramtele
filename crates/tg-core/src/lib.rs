@@ -7,3 +7,5 @@ pub mod storage;
 
 pub mod ayu;
 pub mod core;
+
+pub mod statistics;

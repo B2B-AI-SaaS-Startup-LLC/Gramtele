@@ -267,6 +267,10 @@ pub struct Documents {
     files: Rc<dyn crate::core::file_location::FileLocations>,
 }
 impl Documents {
+    pub fn scope(&self) -> SessionScopeId {
+        self.scope
+    }
+
     pub fn new(
         scope: &SessionScope,
         files: Rc<dyn crate::core::file_location::FileLocations>,

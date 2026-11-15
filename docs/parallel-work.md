@@ -132,3 +132,16 @@ worktrees/ветки не менялись и не интегрируются. �
 0failed/3existingignored,25 новых tests. Native804 exact rows twice,21hashes,
 maprefs/diffchecks PASS. Full workspace tests пройдены один раз после завершения
 пакета; финальный lint cache проверяет последние source/key изменения.
+
+
+Срез port/data-calls-notify от main2f58312, отдельный worktree data-calls-notify:
+[handoff](handoffs/codex-data-calls-notify.md),
+[карта](../crates/tg-core/docs/data-calls-notify-map.md)376 строк/343 done33partial.
+Код только tg-core, normal serde_json1 (existing lock package), без foreign scope.
+GroupCall/Notify owners и backend9/13/26/29/08/18, loader3/4/pixels/UI5 явно partial;
+raw country table/SegmentTree done. Native400 rows; Session/model state own tests+
+чтение, четыре full-owner probes stop at generated emoji.h.25 new tests.
+Один полный финальный workspace-прогон fmt/clippy/test PASS:893 successful
+(892+1 child)/0failed/3existingignored, tg-core248 включая4doctests. Runtime race
+не проявилась, чужой runtime не менялся. Map/hash/repeated-native/diff PASS.
+Интеграция только своей ветки после проверок; main+ветка в gramtele без force.

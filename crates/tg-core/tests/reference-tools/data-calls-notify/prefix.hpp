@@ -1,0 +1,14 @@
+#pragma once
+#include "base/basic_types.h"
+#include "base/flat_map.h"
+#include "base/algorithm.h"
+#include <range/v3/all.hpp>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QJsonDocument>
+#include <QtCore/QJsonObject>
+#include <QtCore/QJsonArray>
+#include <QtCore/QRegularExpression>
+#include <QtGui/QColor>
+#include <iostream>
+#include <iomanip>
+#include <cmath>

@@ -1,3 +1,3 @@
-//! Linux non-window file utilities; desktop opening is deferred to stage 6.
-#[cfg(target_os = "linux")]
+//! Linux filesystem and D-Bus folder effects; actual Qt adapter remains stage5.
+#[cfg(all(unix, not(target_os = "macos")))]
 pub use super::linux::base_file_utilities_linux::*;

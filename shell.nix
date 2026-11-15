@@ -6,5 +6,5 @@
     sha256 = pinned.narHash;
   }) { } }:
 pkgs.mkShell {
-  packages = with pkgs; [ cargo rustc clippy rustfmt gcc pkg-config ];
+  packages = with pkgs; [ cargo rustc clippy rustfmt gcc pkg-config dbus ];
 }

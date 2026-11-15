@@ -73,7 +73,7 @@ impl PowerSaveBlocker {
         let mut registry = registry_lock();
         assert!(
             registry.backend.is_some(),
-            "PowerSaveBlocker requires a platform backend; Linux portal is deferred"
+            "PowerSaveBlocker requires an installed platform backend"
         );
         registry.info.insert(id, (description.to_owned(), window));
         let backend = registry.backend.clone();

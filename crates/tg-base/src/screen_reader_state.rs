@@ -4,7 +4,7 @@
 //! a flag set by the toolkit's accessibility activation observer) are
 //! ported. Who calls [`GeneralScreenReaderState::accessibility_active_changed`]
 //! is the accessibility layer of `tg-window` (stage 5); the Linux-specific
-//! detection through `org.a11y.Status` on D-Bus is deferred.
+//! detection through `org.a11y.Status` is in `base_screen_reader_state_linux`.
 
 use std::cell::RefCell;
 use std::rc::Rc;

@@ -1,5 +1,4 @@
-//! Non-window functions from base_file_utilities_linux.cpp.
-//! ShowInFolder (portal/file manager) and BundledResourcesPath remain deferred.
+//! Linux filesystem and folder-opening protocol; Qt adapter remains stage5.
 use std::path::{Path, PathBuf};
 
 pub fn current_executable_path(arguments: &[String]) -> PathBuf {
@@ -65,6 +64,141 @@ pub fn delete_directory(path: &Path) -> bool {
     }
     std::fs::remove_dir(path).is_ok()
 }
+/// Source deliberately aborts; preserve the port's established Unexpected policy.
+pub fn bundled_resources_path() -> ! {
+    crate::unexpected!("BundledResourcesPath not implemented.")
+}
+
+use super::{base_linux_dbus_utilities as bus, base_linux_xdp_utilities as portal};
+use std::{collections::HashMap, rc::Rc};
+use tg_runtime::{MainQueue, MainRef};
+use zbus::{
+    blocking::Connection,
+    zvariant::{Fd, OwnedObjectPath, OwnedValue, Str},
+};
+
+pub fn dbus_show_in_folder(
+    connection: &Connection,
+    uri: &str,
+    startup_id: &str,
+) -> bus::Result<()> {
+    bus::proxy(
+        connection,
+        "org.freedesktop.FileManager1",
+        "/org/freedesktop/FileManager1",
+        "org.freedesktop.FileManager1",
+    )?
+    .call("ShowItems", &(vec![uri], startup_id))
+}
+pub fn portal_show_in_folder(
+    connection: &Connection,
+    file: &std::fs::File,
+    parent: &str,
+    token: &str,
+) -> bus::Result<OwnedObjectPath> {
+    use std::os::fd::AsFd;
+    let options = HashMap::<String, OwnedValue>::from([(
+        "activation_token".into(),
+        OwnedValue::from(Str::from(token)),
+    )]);
+    bus::proxy(
+        connection,
+        portal::SERVICE,
+        portal::OBJECT_PATH,
+        "org.freedesktop.portal.OpenURI",
+    )?
+    .call("OpenDirectory", &(parent, Fd::from(file.as_fd()), options))
+}
+/// Qt token/window/QDesktopServices adapter is required from stage5.
+pub trait FolderContext: super::base_linux_xdg_activation_token::ActivationTokenProvider {
+    fn parent_window_id(&self) -> String;
+    fn open_parent_directory(&self, path: &Path);
+}
+pub struct FolderRequest {
+    connection: Connection,
+    queue: MainQueue,
+    context: Rc<dyn FolderContext>,
+    path: PathBuf,
+}
+impl FolderRequest {
+    /// Keep the request alive until completion; drop cancels owner callbacks.
+    pub fn start(
+        connection: Connection,
+        queue: MainQueue,
+        context: Rc<dyn FolderContext>,
+        path: PathBuf,
+    ) -> Rc<Self> {
+        let request = Rc::new(Self {
+            connection,
+            queue,
+            context,
+            path,
+        });
+        let me = request.clone();
+        request
+            .context
+            .run_with_xdg_activation_token(Box::new(move |token| {
+                let connection = me.connection.clone();
+                let path = me.path.clone();
+                let q = me.queue.clone();
+                let target = MainRef::new(&me);
+                tg_runtime::async_(move || {
+                    let result = super::base_linux_library::filename_to_uri(&path)
+                        .ok_or(zbus::Error::Failure("filename_to_uri".into()))
+                        .and_then(|uri| {
+                            dbus_show_in_folder(
+                                &connection,
+                                &uri,
+                                token.as_deref().unwrap_or_default(),
+                            )
+                        });
+                    target.on_queue(&q, move |me| {
+                        if result.is_err() {
+                            me.start_portal();
+                        }
+                    });
+                });
+            }));
+        request
+    }
+    fn start_portal(self: &Rc<Self>) {
+        let Ok(file) = std::fs::File::open(&self.path) else {
+            self.fallback();
+            return;
+        };
+        let me = self.clone();
+        self.context
+            .run_with_xdg_activation_token(Box::new(move |token| {
+                let parent = me.context.parent_window_id();
+                let conn = me.connection.clone();
+                let q = me.queue.clone();
+                let target = MainRef::new(&me);
+                tg_runtime::async_(move || {
+                    let result = portal_show_in_folder(
+                        &conn,
+                        &file,
+                        &parent,
+                        token.as_deref().unwrap_or_default(),
+                    );
+                    target.on_queue(&q, move |me| {
+                        if result.is_err() {
+                            me.fallback();
+                        }
+                    });
+                });
+            }));
+    }
+    fn fallback(&self) {
+        let path = if self.path.is_absolute() {
+            self.path.clone()
+        } else {
+            std::env::current_dir().unwrap_or_default().join(&self.path)
+        };
+        self.context
+            .open_parent_directory(path.parent().unwrap_or(Path::new("/")));
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

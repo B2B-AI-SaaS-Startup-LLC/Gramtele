@@ -24,6 +24,10 @@ zeroize = "1.8"
 [target.'cfg(unix)'.dependencies]
 nix = { version = "0.31", features = ["fs", "signal"] }
 
+[target.'cfg(all(unix, not(target_os = "macos")))'.dependencies]
+zbus = "=5.19.0"
+futures-core = "0.3"
+
 [target.'cfg(windows)'.dependencies]
 file-guard = "0.2"
 restart-manager = "0.1"

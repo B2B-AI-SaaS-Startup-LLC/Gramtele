@@ -1,6 +1,6 @@
 //! Порт: Telegram/lib_base оригинала AyuGramDesktop.
 
-#![forbid(unsafe_code)]
+#![deny(unsafe_code)]
 
 pub mod algorithm;
 pub mod assertion;

@@ -1679,3 +1679,45 @@ MessagesList decrement/overcount, timezone request latch, shortcut0 local-only)
 и /tmp/data-lists-final-lints.log. Известная runtime race не воспроизвелась.
 Source hashes/native repeat/map references/diff --check PASS; учёт до коммита.
 Интеграция только своей ветки fast-forward в main, push обеих без force.
+
+## port/base-linux — platform Linux, part1
+
+База6cba7aa; отдельный worktree base-linux, старая пустая ветка сброшена на
+свежий gramtele/main по прямому указанию пользователя.28 Linux originals/2427LOC:
+9done/19partial; шесть необходимых common файлов, всего34 original source hashes.
+[Карта](crates/tg-base/docs/platform-linux-1-map.md):209 строк140done/69partial,
+0pending; объявления/тела/inline overloads и structural rows учтены отдельно.
+[Handoff](docs/handoffs/codex-base-linux-1.md) содержит статус каждого файла,
+реальные ограничения и различия.13 новых tests + отдельный GIO child.
+
+zbus blocking + readiness через MainQueue, без собственного event loop; реальные
+D-Bus контракты, watchers/variants, Info/DMI/libc/device/locale transformations,
+optional dlopen, Mutter latch, Snap/feedbackd/FileManager, GIO URL registration,
+a11y/battery стандартные providers, power timer/protocol, folder FD/fallback и
+launch context/token contracts. Native263 точных строк повторён побайтно;
+настоящие common info/library cpp + extracted chassis/enum, Qt/KShell. Чистого
+os-release parser в закреплённом оригинале нет. Прочее own tests + чтение.
+Настоящий private portal: ReadOne NotFound; Inhibit/OpenDirectory request paths,
+UnixFD и два Response(2,{}) подтверждены. Gtk backend/permission store отсутствуют
+на этой шине; успешный grant/SettingsChanged не объявлены проверенными.
+GIO loaded и absent paths проверены в child с private XDG; user session не тронута.
+
+Partial: Qt5 focus/activation/observer/Gio subclass/locale/startup/desktop fallback;
+XCB part2 query/reset/WM/X11/Xwayland/activate; live portal success/settings/grant
+lifecycle1; custom GIO extensions и точный async monitor init/startup1/5.
+Нет fake window/monitor или portal stub. Исходные enum/raw codes, permanent idle
+latch, first-dot replacement, ignored duplicate reasons и 10s timer сохранены.
+Отличия: явный lifetime FolderRequest/cancellation и RAII FD, GIO optional dlopen,
+zbus errors, синхронное первое чтение уже существующего PowerProfiles service;
+подробности и пределы native-доказательства в handoff.
+
+Новые direct deps: zbus=5.19.0/futures-core0.3 (51 новых lock packages, без upgrades
+существующих); dev shell dbus. Part2/Claude/чужие worktrees не менялись.
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:926 successful (924 regular +2
+isolated child results),0failed,3existingignored. One full final workspace run,
+/tmp/base-linux-workspace-checks.log. Final tg-base clippy/all-targets, fmt check,
+13 focused tests (+GIO child) and loaded-GIO child confirmation also PASS after
+final source/native adjustments. Final native263 exact rows twice,34 sourcehashes,
+all map file/test references and git diff --check PASS. Runtime race did not
+reproduce; tg-runtime unchanged. Accounting updated before commit/report.

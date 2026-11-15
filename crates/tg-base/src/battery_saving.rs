@@ -1,8 +1,7 @@
 //! Port of `base/battery_saving.h` / `battery_saving.cpp`.
 //!
-//! The generic holder is ported; the Linux helper (`GPowerProfileMonitor`
-//! through GLib) is deferred, so [`create_battery_saving`] reports "not
-//! supported" until a platform helper is installed.
+//! Linux supplies its explicit factory from `base_battery_saving_linux`;
+//! display/session startup installs the appropriate platform helper.
 
 use std::rc::Rc;
 use tg_rpl::{Producer, Variable};
@@ -32,7 +31,7 @@ pub struct BatterySaving {
 }
 
 /// Explicit unsupported helper. Linux GLib detection must be supplied by the
-/// future platform backend; this factory does not perform platform detection.
+/// Linux platform backend; this factory does not perform platform detection.
 pub fn unsupported_factory() -> HelperFactory {
     Box::new(|_| Rc::new(Unsupported))
 }

@@ -1,0 +1,263 @@
+{"args":[""],"expected":false,"op":"model_ok"}
+{"args":[""],"expected":"","op":"simplify"}
+{"args":[""],"expected":"","op":"product"}
+{"args":[""],"expected":"","op":"good"}
+{"args":[""],"expected":"Desktop","op":"finalize"}
+{"args":["a"],"expected":true,"op":"model_ok"}
+{"args":["a"],"expected":"a","op":"simplify"}
+{"args":["a"],"expected":"a","op":"product"}
+{"args":["a"],"expected":"a","op":"good"}
+{"args":["a"],"expected":"a","op":"finalize"}
+{"args":["Desktop"],"expected":true,"op":"model_ok"}
+{"args":["Desktop"],"expected":"Desktop","op":"simplify"}
+{"args":["Desktop"],"expected":"Desktop","op":"product"}
+{"args":["Desktop"],"expected":"","op":"good"}
+{"args":["Desktop"],"expected":"Desktop","op":"finalize"}
+{"args":["0123456789012345"],"expected":false,"op":"model_ok"}
+{"args":["0123456789012345"],"expected":"0123456789012345","op":"simplify"}
+{"args":["0123456789012345"],"expected":"","op":"product"}
+{"args":["0123456789012345"],"expected":"0123456789012345","op":"good"}
+{"args":["0123456789012345"],"expected":"0123456789012345","op":"finalize"}
+{"args":["01234567890123456"],"expected":false,"op":"model_ok"}
+{"args":["01234567890123456"],"expected":"01234567890123456","op":"simplify"}
+{"args":["01234567890123456"],"expected":"","op":"product"}
+{"args":["01234567890123456"],"expected":"01234567890123456","op":"good"}
+{"args":["01234567890123456"],"expected":"01234567890123456","op":"finalize"}
+{"args":["😀😀😀😀😀😀😀"],"expected":true,"op":"model_ok"}
+{"args":["😀😀😀😀😀😀😀"],"expected":"😀😀😀😀😀😀😀","op":"simplify"}
+{"args":["😀😀😀😀😀😀😀"],"expected":"😀😀😀😀😀😀😀","op":"product"}
+{"args":["😀😀😀😀😀😀😀"],"expected":"😀😀😀😀😀😀😀","op":"good"}
+{"args":["😀😀😀😀😀😀😀"],"expected":"😀😀😀😀😀😀😀","op":"finalize"}
+{"args":["😀😀😀😀😀😀😀😀"],"expected":false,"op":"model_ok"}
+{"args":["😀😀😀😀😀😀😀😀"],"expected":"😀😀😀😀😀😀😀😀","op":"simplify"}
+{"args":["😀😀😀😀😀😀😀😀"],"expected":"","op":"product"}
+{"args":["😀😀😀😀😀😀😀😀"],"expected":"😀😀😀😀😀😀😀😀","op":"good"}
+{"args":["😀😀😀😀😀😀😀😀"],"expected":"😀😀😀😀😀😀😀😀","op":"finalize"}
+{"args":["a_ b\n c\t\u0001"],"expected":true,"op":"model_ok"}
+{"args":["a_ b\n c\t\u0001"],"expected":"a b c","op":"simplify"}
+{"args":["a_ b\n c\t\u0001"],"expected":"a_ b\n c\t\u0001","op":"product"}
+{"args":["a_ b\n c\t\u0001"],"expected":"a_ b\n c\t\u0001","op":"good"}
+{"args":["a_ b\n c\t\u0001"],"expected":"a_ b\n c\t\u0001","op":"finalize"}
+{"args":["HP EliteBook 840 G8 Notebook PC"],"expected":false,"op":"model_ok"}
+{"args":["HP EliteBook 840 G8 Notebook PC"],"expected":"HP EliteBook 840 G8 Notebook PC","op":"simplify"}
+{"args":["HP EliteBook 840 G8 Notebook PC"],"expected":"HP EliteBook 840 G8","op":"product"}
+{"args":["HP EliteBook 840 G8 Notebook PC"],"expected":"HP EliteBook 840 G8","op":"good"}
+{"args":["HP EliteBook 840 G8 Notebook PC"],"expected":"HP EliteBook 840 G8 Notebook PC","op":"finalize"}
+{"args":["HP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx PC"],"expected":false,"op":"model_ok"}
+{"args":["HP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx PC"],"expected":"HP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx PC","op":"simplify"}
+{"args":["HP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx PC"],"expected":"HP","op":"product"}
+{"args":["HP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx PC"],"expected":"HP","op":"good"}
+{"args":["HP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx PC"],"expected":"HP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx PC","op":"finalize"}
+{"args":["HP mobile workstation PC"],"expected":false,"op":"model_ok"}
+{"args":["HP mobile workstation PC"],"expected":"HP mobile workstation PC","op":"simplify"}
+{"args":["HP mobile workstation PC"],"expected":"HP","op":"product"}
+{"args":["HP mobile workstation PC"],"expected":"HP","op":"good"}
+{"args":["HP mobile workstation PC"],"expected":"HP mobile workstation PC","op":"finalize"}
+{"args":["  ab  cd  "],"expected":true,"op":"model_ok"}
+{"args":["  ab  cd  "],"expected":"ab cd","op":"simplify"}
+{"args":["  ab  cd  "],"expected":"  ab  cd  ","op":"product"}
+{"args":["  ab  cd  "],"expected":"ab  cd  ","op":"good"}
+{"args":["  ab  cd  "],"expected":"ab  cd","op":"finalize"}
+{"args":["a b"],"expected":true,"op":"model_ok"}
+{"args":["a b"],"expected":"a b","op":"simplify"}
+{"args":["a b"],"expected":"a b","op":"product"}
+{"args":["a b"],"expected":"a b","op":"good"}
+{"args":["a b"],"expected":"a b","op":"finalize"}
+{"args":["a b"],"expected":true,"op":"model_ok"}
+{"args":["a b"],"expected":"a b","op":"simplify"}
+{"args":["a b"],"expected":"a b","op":"product"}
+{"args":["a b"],"expected":"a b","op":"good"}
+{"args":["a b"],"expected":"a b","op":"finalize"}
+{"args":[0],"expected":"","op":"chassis"}
+{"args":[1],"expected":"","op":"chassis"}
+{"args":[2],"expected":"","op":"chassis"}
+{"args":[3],"expected":"Desktop","op":"chassis"}
+{"args":[4],"expected":"Desktop","op":"chassis"}
+{"args":[5],"expected":"","op":"chassis"}
+{"args":[6],"expected":"Desktop","op":"chassis"}
+{"args":[7],"expected":"Desktop","op":"chassis"}
+{"args":[8],"expected":"Laptop","op":"chassis"}
+{"args":[9],"expected":"Laptop","op":"chassis"}
+{"args":[10],"expected":"Laptop","op":"chassis"}
+{"args":[11],"expected":"Handset","op":"chassis"}
+{"args":[12],"expected":"","op":"chassis"}
+{"args":[13],"expected":"Desktop","op":"chassis"}
+{"args":[14],"expected":"Laptop","op":"chassis"}
+{"args":[15],"expected":"","op":"chassis"}
+{"args":[16],"expected":"","op":"chassis"}
+{"args":[17],"expected":"Server","op":"chassis"}
+{"args":[18],"expected":"","op":"chassis"}
+{"args":[19],"expected":"","op":"chassis"}
+{"args":[20],"expected":"","op":"chassis"}
+{"args":[21],"expected":"","op":"chassis"}
+{"args":[22],"expected":"","op":"chassis"}
+{"args":[23],"expected":"","op":"chassis"}
+{"args":[24],"expected":"","op":"chassis"}
+{"args":[25],"expected":"","op":"chassis"}
+{"args":[26],"expected":"","op":"chassis"}
+{"args":[27],"expected":"","op":"chassis"}
+{"args":[28],"expected":"Server","op":"chassis"}
+{"args":[29],"expected":"Server","op":"chassis"}
+{"args":[30],"expected":"Tablet","op":"chassis"}
+{"args":[31],"expected":"Convertible","op":"chassis"}
+{"args":[32],"expected":"Convertible","op":"chassis"}
+{"args":[33],"expected":"","op":"chassis"}
+{"args":[34],"expected":"","op":"chassis"}
+{"args":[35],"expected":"","op":"chassis"}
+{"args":[""],"expected":false,"op":"version"}
+{"args":["glibc",""],"expected":false,"op":"old_glibc"}
+{"args":["musl",""],"expected":false,"op":"old_glibc"}
+{"args":["",""],"expected":false,"op":"old_glibc"}
+{"args":["2.27"],"expected":true,"op":"version"}
+{"args":["glibc","2.27"],"expected":true,"op":"old_glibc"}
+{"args":["musl","2.27"],"expected":false,"op":"old_glibc"}
+{"args":["","2.27"],"expected":false,"op":"old_glibc"}
+{"args":["2.28"],"expected":true,"op":"version"}
+{"args":["glibc","2.28"],"expected":false,"op":"old_glibc"}
+{"args":["musl","2.28"],"expected":false,"op":"old_glibc"}
+{"args":["","2.28"],"expected":false,"op":"old_glibc"}
+{"args":["2.28.0"],"expected":true,"op":"version"}
+{"args":["glibc","2.28.0"],"expected":false,"op":"old_glibc"}
+{"args":["musl","2.28.0"],"expected":false,"op":"old_glibc"}
+{"args":["","2.28.0"],"expected":false,"op":"old_glibc"}
+{"args":["2.28.1"],"expected":true,"op":"version"}
+{"args":["glibc","2.28.1"],"expected":false,"op":"old_glibc"}
+{"args":["musl","2.28.1"],"expected":false,"op":"old_glibc"}
+{"args":["","2.28.1"],"expected":false,"op":"old_glibc"}
+{"args":["2"],"expected":true,"op":"version"}
+{"args":["glibc","2"],"expected":true,"op":"old_glibc"}
+{"args":["musl","2"],"expected":false,"op":"old_glibc"}
+{"args":["","2"],"expected":false,"op":"old_glibc"}
+{"args":["2x"],"expected":true,"op":"version"}
+{"args":["glibc","2x"],"expected":true,"op":"old_glibc"}
+{"args":["musl","2x"],"expected":false,"op":"old_glibc"}
+{"args":["","2x"],"expected":false,"op":"old_glibc"}
+{"args":["0"],"expected":true,"op":"version"}
+{"args":["glibc","0"],"expected":true,"op":"old_glibc"}
+{"args":["musl","0"],"expected":false,"op":"old_glibc"}
+{"args":["","0"],"expected":false,"op":"old_glibc"}
+{"args":["0.0"],"expected":true,"op":"version"}
+{"args":["glibc","0.0"],"expected":true,"op":"old_glibc"}
+{"args":["musl","0.0"],"expected":false,"op":"old_glibc"}
+{"args":["","0.0"],"expected":false,"op":"old_glibc"}
+{"args":["1.99"],"expected":true,"op":"version"}
+{"args":["glibc","1.99"],"expected":true,"op":"old_glibc"}
+{"args":["musl","1.99"],"expected":false,"op":"old_glibc"}
+{"args":["","1.99"],"expected":false,"op":"old_glibc"}
+{"args":["3.0"],"expected":true,"op":"version"}
+{"args":["glibc","3.0"],"expected":false,"op":"old_glibc"}
+{"args":["musl","3.0"],"expected":false,"op":"old_glibc"}
+{"args":["","3.0"],"expected":false,"op":"old_glibc"}
+{"args":["2.028"],"expected":true,"op":"version"}
+{"args":["glibc","2.028"],"expected":false,"op":"old_glibc"}
+{"args":["musl","2.028"],"expected":false,"op":"old_glibc"}
+{"args":["","2.028"],"expected":false,"op":"old_glibc"}
+{"args":["02.28"],"expected":true,"op":"version"}
+{"args":["glibc","02.28"],"expected":false,"op":"old_glibc"}
+{"args":["musl","02.28"],"expected":false,"op":"old_glibc"}
+{"args":["","02.28"],"expected":false,"op":"old_glibc"}
+{"args":["2147483648.1"],"expected":false,"op":"version"}
+{"args":["glibc","2147483648.1"],"expected":true,"op":"old_glibc"}
+{"args":["musl","2147483648.1"],"expected":false,"op":"old_glibc"}
+{"args":["","2147483648.1"],"expected":false,"op":"old_glibc"}
+{"args":[".2"],"expected":false,"op":"version"}
+{"args":["glibc",".2"],"expected":true,"op":"old_glibc"}
+{"args":["musl",".2"],"expected":false,"op":"old_glibc"}
+{"args":["",".2"],"expected":false,"op":"old_glibc"}
+{"args":[" 2.4"],"expected":true,"op":"version"}
+{"args":["glibc"," 2.4"],"expected":true,"op":"old_glibc"}
+{"args":["musl"," 2.4"],"expected":false,"op":"old_glibc"}
+{"args":[""," 2.4"],"expected":false,"op":"old_glibc"}
+{"args":["2.2147483648"],"expected":true,"op":"version"}
+{"args":["glibc","2.2147483648"],"expected":true,"op":"old_glibc"}
+{"args":["musl","2.2147483648"],"expected":false,"op":"old_glibc"}
+{"args":["","2.2147483648"],"expected":false,"op":"old_glibc"}
+{"args":["2..1"],"expected":true,"op":"version"}
+{"args":["glibc","2..1"],"expected":true,"op":"old_glibc"}
+{"args":["musl","2..1"],"expected":false,"op":"old_glibc"}
+{"args":["","2..1"],"expected":false,"op":"old_glibc"}
+{"args":["-1"],"expected":false,"op":"version"}
+{"args":["glibc","-1"],"expected":true,"op":"old_glibc"}
+{"args":["musl","-1"],"expected":false,"op":"old_glibc"}
+{"args":["","-1"],"expected":false,"op":"old_glibc"}
+{"args":["2.28x"],"expected":true,"op":"version"}
+{"args":["glibc","2.28x"],"expected":false,"op":"old_glibc"}
+{"args":["musl","2.28x"],"expected":false,"op":"old_glibc"}
+{"args":["","2.28x"],"expected":false,"op":"old_glibc"}
+{"args":["+2.4"],"expected":true,"op":"version"}
+{"args":["glibc","+2.4"],"expected":true,"op":"old_glibc"}
+{"args":["musl","+2.4"],"expected":false,"op":"old_glibc"}
+{"args":["","+2.4"],"expected":false,"op":"old_glibc"}
+{"args":["\t2.4"],"expected":true,"op":"version"}
+{"args":["glibc","\t2.4"],"expected":true,"op":"old_glibc"}
+{"args":["musl","\t2.4"],"expected":false,"op":"old_glibc"}
+{"args":["","\t2.4"],"expected":false,"op":"old_glibc"}
+{"args":["2. 28"],"expected":true,"op":"version"}
+{"args":["glibc","2. 28"],"expected":false,"op":"old_glibc"}
+{"args":["musl","2. 28"],"expected":false,"op":"old_glibc"}
+{"args":["","2. 28"],"expected":false,"op":"old_glibc"}
+{"args":[" 2.4"],"expected":false,"op":"version"}
+{"args":["glibc"," 2.4"],"expected":true,"op":"old_glibc"}
+{"args":["musl"," 2.4"],"expected":false,"op":"old_glibc"}
+{"args":[""," 2.4"],"expected":false,"op":"old_glibc"}
+{"args":["2.+29"],"expected":true,"op":"version"}
+{"args":["glibc","2.+29"],"expected":false,"op":"old_glibc"}
+{"args":["musl","2.+29"],"expected":false,"op":"old_glibc"}
+{"args":["","2.+29"],"expected":false,"op":"old_glibc"}
+{"args":[""],"expected":[],"op":"split"}
+{"args":[""],"expected":"''","op":"quote"}
+{"args":["  --foo x "],"expected":["--foo","x"],"op":"split"}
+{"args":["  --foo x "],"expected":"'  --foo x '","op":"quote"}
+{"args":["one 'two three'"],"expected":["one","two three"],"op":"split"}
+{"args":["one 'two three'"],"expected":"'one '\\''two three'\\'''","op":"quote"}
+{"args":["a\tb\nc"],"expected":["a\tb\nc"],"op":"split"}
+{"args":["a\tb\nc"],"expected":"abc","op":"quote"}
+{"args":["\"a\\$b\""],"expected":["a\\$b"],"op":"split"}
+{"args":["\"a\\$b\""],"expected":"'\"a\\$b\"'","op":"quote"}
+{"args":["\"a\\`b\""],"expected":["a\\`b"],"op":"split"}
+{"args":["\"a\\`b\""],"expected":"'\"a\\`b\"'","op":"quote"}
+{"args":["a'b c'd"],"expected":["ab cd"],"op":"split"}
+{"args":["a'b c'd"],"expected":"'a'\\''b c'\\''d'","op":"quote"}
+{"args":["a\\ b"],"expected":["a b"],"op":"split"}
+{"args":["a\\ b"],"expected":"'a\\ b'","op":"quote"}
+{"args":["'"],"expected":[],"op":"split"}
+{"args":["'"],"expected":"''\\'''","op":"quote"}
+{"args":["\"bad"],"expected":[],"op":"split"}
+{"args":["\"bad"],"expected":"'\"bad'","op":"quote"}
+{"args":["a\\"],"expected":[],"op":"split"}
+{"args":["a\\"],"expected":"'a\\'","op":"quote"}
+{"args":["$'\\n\\t\\x10\\x11\\101'"],"expected":["\n\t\u00010\u0011A"],"op":"split"}
+{"args":["$'\\n\\t\\x10\\x11\\101'"],"expected":"'$'\\''\\n\\t\\x10\\x11\\101'\\'''","op":"quote"}
+{"args":["$'\\x1'"],"expected":["\u0001"],"op":"split"}
+{"args":["$'\\x1'"],"expected":"'$'\\''\\x1'\\'''","op":"quote"}
+{"args":["$'\\q\\cA\\777'"],"expected":["\\q\u0001ǿ"],"op":"split"}
+{"args":["$'\\q\\cA\\777'"],"expected":"'$'\\''\\q\\cA\\777'\\'''","op":"quote"}
+{"args":["'' \"\""],"expected":["",""],"op":"split"}
+{"args":["'' \"\""],"expected":"''\\'''\\'' \"\"'","op":"quote"}
+{"args":["$HOME ~x #x"],"expected":["$HOME","~x","#x"],"op":"split"}
+{"args":["$HOME ~x #x"],"expected":"'$HOME ~x #x'","op":"quote"}
+{"args":["a;b & (x)"],"expected":["a;b","&","(x)"],"op":"split"}
+{"args":["a;b & (x)"],"expected":"'a;b & (x)'","op":"quote"}
+{"args":["​ "],"expected":["​ "],"op":"split"}
+{"args":["​ "],"expected":"​ ","op":"quote"}
+{"args":["a'\\b\"c\u0001"],"expected":[],"op":"split"}
+{"args":["a'\\b\"c\u0001"],"expected":"'a'\\''\\b\"c'","op":"quote"}
+{"args":["\u0000\n"],"expected":["\u0000\n"],"op":"split"}
+{"args":["\u0000\n"],"expected":"''","op":"quote"}
+{"args":["😀"],"expected":["😀"],"op":"split"}
+{"args":["😀"],"expected":"😀","op":"quote"}
+{"args":[],"expected":"","op":"join"}
+{"args":[""],"expected":"''","op":"join"}
+{"args":["/opt/a b/app","--flag","--","%u"],"expected":"'/opt/a b/app' --flag -- %u","op":"join"}
+{"args":["it's","a\nb","\t","x"],"expected":"'it'\\''s' ab '' x","op":"join"}
+{"args":[""],"expected":[],"op":"desktop"}
+{"args":["GNOME: GNOME : :KDE"],"expected":["GNOME","GNOME","KDE"],"op":"desktop"}
+{"args":[":\t:\n:"],"expected":[],"op":"desktop"}
+{"args":["A B:C"],"expected":["A B","C"],"op":"desktop"}
+{"args":[],"expected":[0,1],"op":"start_enum"}
+{"args":[],"expected":false,"op":"load_missing"}
+{"args":[],"expected":false,"op":"symbol_missing"}
+{"args":[":1.2","desktop_app4294967295"],"expected":"/org/freedesktop/portal/desktop/request/1_2/desktop_app4294967295","op":"dbus_request_path"}
+{"args":[":123.987","desktop_app4294967295"],"expected":"/org/freedesktop/portal/desktop/request/123_987/desktop_app4294967295","op":"dbus_request_path"}
+{"args":[":1.2.3","desktop_app4294967295"],"expected":"/org/freedesktop/portal/desktop/request/1_2.3/desktop_app4294967295","op":"dbus_request_path"}
+{"args":[":0.0","desktop_app4294967295"],"expected":"/org/freedesktop/portal/desktop/request/0_0/desktop_app4294967295","op":"dbus_request_path"}

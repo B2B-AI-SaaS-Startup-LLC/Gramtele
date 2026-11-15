@@ -156,3 +156,23 @@ backends явно partial, без stand-in records. Только tg-core/сво�
 manifest/lock и Claude/foreign worktrees не менялись.
 FINAL_DATA_SMALL_PARALLEL_CHECK_PENDING
 Интеграция только собственной ветки после проверок; main+ветка в gramtele без force.
+
+Срез port/base-linux part1 от main6cba7aa, отдельный worktree base-linux; только
+tg-base/platform Linux, необходимые common contracts, собственные tests/native/
+учёт и dependency/dev-shell изменения.28 Linux files2427LOC,9done19partial;
+[map](../crates/tg-base/docs/platform-linux-1-map.md)209rows140done69partial0pending,
+[handoff](handoffs/codex-base-linux-1.md).13newtests+GIOchild,263nativeexactrows,
+34sourcehashes, настоящая отдельная D-Bus-шина и настоящий portalfrontend:
+ReadOne NotFound +request paths/UnixFD/Response2, без portalstub/user-session.
+Qt5/XCBpart2, custom GIO init/extensions и portalgrants/settings остаются partial.
+Не трогать Claude и part2 XCB/globalshortcuts/systemmedia/allocationtracer.
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:926 successful (924 regular +2
+isolated child results),0failed,3existingignored. One full final workspace run,
+/tmp/base-linux-workspace-checks.log. Final tg-base clippy/all-targets, fmt check,
+13 focused tests (+GIO child) and loaded-GIO child confirmation also PASS after
+final source/native adjustments. Final native263 exact rows twice,34 sourcehashes,
+all map file/test references and git diff --check PASS. Runtime race did not
+reproduce; tg-runtime unchanged. Accounting updated before commit/report.
+Интеграция только собственной ветки после проверок, push main+ветка gramtele
+без force. Известную runtime thread-drop race не исправлять.

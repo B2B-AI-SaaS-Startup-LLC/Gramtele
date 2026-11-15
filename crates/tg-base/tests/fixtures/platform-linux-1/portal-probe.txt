@@ -1,0 +1,7 @@
+ReadOne: Err(MethodError(OwnedErrorName("org.freedesktop.portal.Error.NotFound"), Some("Requested setting not found"), Msg { type: Error, serial: 91, sender: UniqueName(":1.1"), reply-serial: 3, body: Str, fds: [] }))
+ReadOne missing/typed: Err(MethodError(OwnedErrorName("org.freedesktop.portal.Error.NotFound"), Some("Requested setting not found"), Msg { type: Error, serial: 93, sender: UniqueName(":1.1"), reply-serial: 4, body: Str, fds: [] }))
+Inhibit: Ok(OwnedObjectPath(ObjectPath("/org/freedesktop/portal/desktop/request/1_3/desktop_app123"))); predicted path: /org/freedesktop/portal/desktop/request/1_3/desktop_app123
+OpenDirectory: Ok(OwnedObjectPath(ObjectPath("/org/freedesktop/portal/desktop/request/1_3/t")))
+Response /org/freedesktop/portal/desktop/request/1_3/desktop_app123: Ok((2, {}))
+Response /org/freedesktop/portal/desktop/request/1_3/t: Ok((2, {}))
+Response count: 2 (backend acceptance remains unverified)

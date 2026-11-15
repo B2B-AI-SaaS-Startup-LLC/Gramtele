@@ -7,10 +7,12 @@
 pub mod base_platform_custom_app_icon;
 pub mod base_platform_file_utilities;
 pub mod base_platform_haptic;
+pub mod base_platform_info;
 pub mod base_platform_last_input;
 pub mod base_platform_layout_switch;
 pub mod base_platform_network_reachability;
 pub mod base_platform_power_save_blocker;
+pub mod base_platform_url_scheme;
 
-#[cfg(target_os = "linux")]
+#[cfg(all(unix, not(target_os = "macos")))]
 pub mod linux;

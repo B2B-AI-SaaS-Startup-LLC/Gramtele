@@ -100,3 +100,18 @@ leases, TL, filename/MIME contract, cache queue adapter. Wire PhotoKey/DocumentK
 Предварительная полная проверка на базе0c38855: fmt --check PASS, clippy --workspace --all-targets -D warnings PASS, test --workspace PASS (802 успешных результата,0 failed,3 прежних ignored). После совмещения с уже принятым main750204e проверки повторяются.
 
 После точного переноса Windows post-dialog lowercasing и расширения native до1717 строк все три проверки workspace повторены: fmt/clippy/test PASS,809 successful,0 failed,3 прежних ignored. Лог /tmp/data-media-final-checks.log.
+
+Срез06/07 port/data-misc от main4265492, отдельный worktree data-misc:
+[handoff](handoffs/codex-data-misc.md),
+[карта](../crates/tg-core/docs/data-misc-map.md). Только tg-core data modules,
+свои tests/reference tools/accounting.19 files3627LOC,15done/4partial;
+443 map rows412done/31partial/0pending (h declarations/cpp bodies отдельно),
+34 новых tests,1779 native rows/16 source hashes. AutoDownload effect из принятых
+settings применяется к Full без fake SessionSettings; concrete Sender bridge и
+Peers/Changes automatic clear проверены. Full peer persistence/chats list13/29,
+UI emoji groups5 и UniqueGift/name16/01 остаются partial. Не трогать Claude
+lang/countries/credits/tg-ui/codegen/runtime/mtproto и storage/localstorage, а также
+чужие worktrees. Интегрируется только своя ветка, push main+ветки в gramtele без force.
+
+Финальные три проверки data-misc workspace PASS:843successful,0failed,3 старых
+ignored;34 новых tests. Известная runtime race локально не воспроизвелась.

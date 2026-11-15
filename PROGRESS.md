@@ -1548,3 +1548,37 @@ UpdateChecker — LocalEffect. Темы, фоны, языковые пакеты
 
 
 После точного переноса Windows post-dialog lowercasing и расширения native до1717 строк все три проверки workspace повторены: fmt/clippy/test PASS,809 successful,0 failed,3 прежних ignored. Лог /tmp/data-media-final-checks.log.
+
+## 15.11.2026: data-misc — срез пакетов 06/07 (port/data-misc)
+
+От main4265492 в отдельном worktree data-misc. Прочитаны все 19 файлов3627LOC;
+ledger15 done/4partial. Перенесены AutoDownload Full/Set/Single и все решения,
+v1/v2/v3/overrides и применение legacy SessionEffect::AutoDownloadBytesLimit к
+реальному Full; все FileOrigin variants/comparators и19 TL file-reference
+accumulator entry points; AudioMsgId, authorization/boosts/bot app data contracts,
+application registry, sparse Vec/VecDeque/FlatSet snapshots, business common/TL/
+working hours. TopPeers model/rating/requests и non-UI EmojiStatuses service,
+виртуальные timers, concrete Sender adapters, реальные Peers/Changes/clear binding.
+
+Полная карта crates/tg-core/docs/data-misc-map.md:443 строки412done/31partial/0pending
+(декларации h и тела cpp отдельно, не unique-function count). 34 новых tests,
+1779 native rows, два снимка побайтно одинаковы,16 original source hashes.
+Native полностью проверяет pure stream/limits/traversal/intervals/rights/rating/hash;
+model/Session state и dereferencing Should/Audio classification — own tests+чтение.
+Подробности и сборочная диагностика в docs/handoffs/codex-data-misc.md.
+
+Partial только top_peers.h/.cpp: full Serialize::peer codec/chats-list owner13/29;
+emoji_statuses.h/.cpp: Ui::EmojiGroup/groups stage5, UniqueGift/name16/01.
+Полный Main::Session lifecycle остаётся29, без fake owners. В pinned auto_download
+нет Preload, у FileOrigin нет отдельного persistence format. Все source quirks
+(принятие truncated auto settings, Reset reload latch, GetDefault для channel,
+collectible first payload, reentrant timer cancellation, business suffix loss)
+перенесены и названы в handoff. AudioMsgId duration cutoff — исходные60мс
+(комментарий C++ ошибочно говорит о минуте), также сохранён. Новых зависимостей/lock/manifest changes нет.
+Claude files и чужие ветки не менялись; принятый750204e сохранён.
+
+Финальные проверки data-misc через nix develop: fmt --check PASS;
+clippy --workspace --all-targets -D warnings PASS; test --workspace PASS:
+843 successful (842+1 child),0failed/3 прежних ignored,34 новых tests.
+Лог /tmp/data-misc-verified-workspace-checks.log. Все Source hashes/native repeat/
+map references/git diff --check PASS. Учёт обновлён до коммита и отчёта.

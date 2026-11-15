@@ -88,7 +88,11 @@ fn binlog_size(base: &Path) -> u64 {
     fs::metadata(base.join("0/binlog")).unwrap().len()
 }
 fn wait_compact(host: &Host, db: &Database, base: &Path, before: u64) {
-    until(host, db, || binlog_size(base) < before && compacted(base));
+    // The compactor replaces binlog by remove + rename (as File::Move does),
+    // so it can be briefly missing while we poll.
+    until(host, db, || {
+        fs::metadata(base.join("0/binlog")).is_ok_and(|m| m.len() < before) && compacted(base)
+    });
     db.sync();
 }
 

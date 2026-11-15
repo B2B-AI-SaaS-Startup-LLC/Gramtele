@@ -66,6 +66,7 @@ pub struct PreparedUpload {
     pub video_cover: Option<Box<PreparedUpload>>,
     pub attached_stickers: Vec<tl::InputDocument>,
     pub force_file: bool,
+    pub preparation_lease: Option<std::sync::Arc<super::localimageloader::FilePrepareResult>>,
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub struct PartLayout {
@@ -263,6 +264,8 @@ pub enum Effect {
     ContinueFailure(FullMsgId),
     ContinueCancelAll,
     ContinuePreparation,
+    /// Keeps original Entry's prepared file alive through its synchronous ready callback.
+    ReleasePreparation(std::sync::Arc<super::localimageloader::FilePrepareResult>),
     ContinueFinish {
         send: bool,
     },
@@ -399,6 +402,9 @@ impl Uploader {
             .find(|e| e.item == item && e.preparing)
         {
             if size > 0 {
+                if let (Some(prepared), Some(content)) = (&e.file.preparation_lease, &result) {
+                    prepared.materialize(content, size);
+                }
                 e.file.content = result.unwrap();
                 e.file.size = size;
                 e.layout = part_layout(size);
@@ -698,6 +704,7 @@ impl Uploader {
             Effect::ContinuePart(item) => self.continue_part(*item, now),
             Effect::ContinueFailure(item) => self.continue_failure(*item, now),
             Effect::ContinueCancelAll => self.cancel_all(now),
+            Effect::ReleasePreparation(_) => {}
             Effect::ContinuePreparation => {
                 if self.next_timer.is_none() {
                     self.maybe_send(now);
@@ -743,7 +750,8 @@ impl Uploader {
             )));
     }
     fn finish_front(&mut self) {
-        let e = self.queue.remove(0);
+        let mut e = self.queue.remove(0);
+        let lease = e.file.preparation_lease.take();
         let kind = e.file.kind;
         let count = if kind.is_document() {
             i32::from(e.layout.count)
@@ -756,6 +764,9 @@ impl Uploader {
                 id: e.file.id,
                 parts: count,
             });
+            if let Some(lease) = lease {
+                self.effects.push(Effect::ReleasePreparation(lease));
+            }
             return;
         }
         let mut name = e.file.filename.clone();
@@ -811,6 +822,9 @@ impl Uploader {
         } else {
             self.effects.push(Effect::Ready(ready));
         }
+        if let Some(lease) = lease {
+            self.effects.push(Effect::ReleasePreparation(lease));
+        }
     }
     pub fn upload_video_cover(
         &mut self,
@@ -852,7 +866,8 @@ impl Uploader {
 
     pub fn failed(&mut self, item: FullMsgId, _now: i64) {
         if let Some(i) = self.queue.iter().position(|e| e.item == item) {
-            let e = self.queue.remove(i);
+            let mut e = self.queue.remove(i);
+            let lease = e.file.preparation_lease.take();
             if e.preparing {
                 self.effects.push(Effect::CancelPreparation(item));
             }
@@ -861,6 +876,9 @@ impl Uploader {
                 id: e.file.id,
                 kind: e.file.kind,
             });
+            if let Some(lease) = lease {
+                self.effects.push(Effect::ReleasePreparation(lease));
+            }
         } else if let Some(cover) = self.video_to_cover.remove(&item) {
             if let Some(video) = self.waiting_cover.remove(&cover) {
                 self.effects.push(Effect::Failed {

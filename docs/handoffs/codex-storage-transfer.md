@@ -135,3 +135,10 @@ Native76 repeated identical/4source hashes, map248/212done36partial test refs an
 ledger4partial, unchanged dependencies/lock, diff --check PASS. Known runtime race
 passed locally; tg-runtime untouched. Accounting updated before commit/report.
 CI monitoring/restarts are left to the user as requested.
+
+Superseding preparation boundary (storage-prepare): see
+[codex-storage-prepare](codex-storage-prepare.md). Actual encoded/scalar
+FilePrepareResult and strong PreparedUpload lease now exist, archive entries are
+gathered and actual archive worker can run; uploader owns temp path cleanup through
+that lease. Missing preparation3/4 is removed from four map rows; actual image/
+encode/editor5/7 and MainRef worker dispatch29 remain explicitly partial.

@@ -24,3 +24,6 @@ pub mod storage_sparse_ids_list;
 pub mod storage_user_photos;
 pub mod streamed_file_downloader;
 pub mod transfer_transport;
+
+pub mod localimageloader;
+pub mod storage_media_prepare;

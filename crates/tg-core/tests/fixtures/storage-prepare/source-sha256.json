@@ -1,0 +1,12 @@
+{
+  "SourceFiles/storage/localimageloader.h": "d40c1d91dfc651c64f1d8b7dfc750749dd141b5cfb099dd2f9d9f28674ebc478",
+  "SourceFiles/storage/localimageloader.cpp": "0c96aca7aa1a39d65313270b3e5dee0bf6ca11abb69a0b21c47dfdde5168bea9",
+  "SourceFiles/storage/storage_media_prepare.h": "e1f71395233bbf61135c4788fd602030bc25f0983952270e34ee30d84d4d83de",
+  "SourceFiles/storage/storage_media_prepare.cpp": "6b9e5ab463587a13b4c053b9e4cb8f392f3c362fd6a64c1a69738d6ac3a4f8e0",
+  "SourceFiles/core/utils.h": "609106bddfb64d205556e0e98c72d3da0ba4652186a7c5f4f0cc0769bc23a9ee",
+  "SourceFiles/core/utils.cpp": "14909d6dad1cbea58fc087211c4c68d0b2499123f9827344e4323ca7bd43b3a8",
+  "SourceFiles/ui/chat/attach/attach_prepare.h": "6cea571ac55026ed4f323c7f510c296c1c5119b1ac1537f1c9b24eb6ec28ae2c",
+  "SourceFiles/ui/chat/attach/attach_prepare.cpp": "dd5eb5a9258561385a81a340ec7472d52da3db01cf2a4f31eb54d3d2b408cc9f",
+  "SourceFiles/ui/chat/attach/attach_send_files_way.h": "0310cc5e9ba151222ad7e7689e57d25523e86d07ff7edc1396ec75aff8efa575",
+  "SourceFiles/ui/chat/attach/attach_send_files_way.cpp": "d50c4ea89fcda3a258c185bebd61d059e30ca2abdc7fd7fff7002a6982cd83ab"
+}

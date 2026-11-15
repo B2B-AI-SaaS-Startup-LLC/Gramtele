@@ -2458,8 +2458,8 @@ SourceFiles/storage/file_download_web.cpp,652,tg-core,3,partial
 SourceFiles/storage/file_download_web.h,63,tg-core,3,partial
 SourceFiles/storage/file_upload.cpp,1276,tg-core,3,partial
 SourceFiles/storage/file_upload.h,228,tg-core,3,partial
-SourceFiles/storage/localimageloader.cpp,1311,tg-core,3,todo
-SourceFiles/storage/localimageloader.h,352,tg-core,3,todo
+SourceFiles/storage/localimageloader.cpp,1311,tg-core,3,partial
+SourceFiles/storage/localimageloader.h,352,tg-core,3,partial
 SourceFiles/storage/localstorage.cpp,1445,tg-core,3,partial
 SourceFiles/storage/localstorage.h,104,tg-core,3,partial
 SourceFiles/storage/serialize_common.cpp,48,tg-core,3,done
@@ -2481,8 +2481,8 @@ SourceFiles/storage/storage_file_lock_posix.cpp,124,tg-core,3,replaced
 SourceFiles/storage/storage_file_lock_win.cpp,143,tg-core,3,replaced
 SourceFiles/storage/storage_folder_archive.cpp,519,tg-core,3,partial
 SourceFiles/storage/storage_folder_archive.h,59,tg-core,3,partial
-SourceFiles/storage/storage_media_prepare.cpp,559,tg-core,3,todo
-SourceFiles/storage/storage_media_prepare.h,114,tg-core,3,todo
+SourceFiles/storage/storage_media_prepare.cpp,559,tg-core,3,partial
+SourceFiles/storage/storage_media_prepare.h,114,tg-core,3,partial
 SourceFiles/storage/storage_shared_media.cpp,229,tg-core,3,done
 SourceFiles/storage/storage_shared_media.h,301,tg-core,3,done
 SourceFiles/storage/storage_sparse_ids_list.cpp,302,tg-core,3,done
@@ -2636,10 +2636,10 @@ SourceFiles/ui/chat/attach/attach_item_single_file_preview.cpp,115,tg-app-ui,5,t
 SourceFiles/ui/chat/attach/attach_item_single_file_preview.h,41,tg-app-ui,5,todo
 SourceFiles/ui/chat/attach/attach_item_single_media_preview.cpp,238,tg-app-ui,5,todo
 SourceFiles/ui/chat/attach/attach_item_single_media_preview.h,71,tg-app-ui,5,todo
-SourceFiles/ui/chat/attach/attach_prepare.cpp,671,tg-app-ui,5,todo
-SourceFiles/ui/chat/attach/attach_prepare.h,222,tg-app-ui,5,todo
-SourceFiles/ui/chat/attach/attach_send_files_way.cpp,88,tg-app-ui,5,todo
-SourceFiles/ui/chat/attach/attach_send_files_way.h,79,tg-app-ui,5,todo
+SourceFiles/ui/chat/attach/attach_prepare.cpp,671,tg-app-ui,5,partial
+SourceFiles/ui/chat/attach/attach_prepare.h,222,tg-app-ui,5,partial
+SourceFiles/ui/chat/attach/attach_send_files_way.cpp,88,tg-core,3,done
+SourceFiles/ui/chat/attach/attach_send_files_way.h,79,tg-core,3,done
 SourceFiles/ui/chat/attach/attach_single_file_preview.cpp,123,tg-app-ui,5,todo
 SourceFiles/ui/chat/attach/attach_single_file_preview.h,37,tg-app-ui,5,todo
 SourceFiles/ui/chat/attach/attach_single_media_preview.cpp,177,tg-app-ui,5,todo

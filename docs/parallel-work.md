@@ -241,3 +241,25 @@ Native76 repeated identical/4source hashes, map248/212done36partial test refs an
 ledger4partial, unchanged dependencies/lock, diff --check PASS. Known runtime race
 passed locally; tg-runtime untouched. Accounting updated before commit/report.
 CI monitoring/restarts are left to the user as requested.
+
+Срез port/storage-prepare от main ef615ab, worktree storage-prepare:
+[handoff](handoffs/codex-storage-prepare.md),
+[карта](../crates/tg-core/docs/storage-prepare-map.md)262rows151done111partial0pending.
+Four originals2336LOC partial for real pixels/editor5/codecs7/MIME33/History/Session
+01/18/26/29. Headless attach values/flags dependencies live in tg-core only;
+no tg-ui/codegen/runtime/mtproto/lang/credits edits.19new tests/native160repeat/
+10sourcehashes, previous transfer prepare3/4 rows closed within explicit owners.
+Both ba1c576 -noreset and ef615ab wait_compact inherited unchanged. No new X server,
+no fake codecs/models/requests, new deps or lock changes. Integrate own branch only,
+push main+port/storage-prepare gramtele without force; user monitors CI.
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:1013 successful (1009 regular +4
+inherited isolated child results),0failed,3existingignored.19 new tests. One
+completed final workspace run: /tmp/storage-prepare-final-workspace-checks.log.
+Earlier attempts were interrupted for actual TL flags/shared-state/callback-lock
+corrections; some had reached cache tests, no failed test results were hidden.
+Final run includes all fixes and the reentrant archive progress regression.
+Native160 repeated identical/10source hashes, map262/151done111partial refs and
+ledger/scope/diff audits PASS. Dependencies/lock unchanged; ba1c576/ef615ab preserved.
+Private XCB test and known runtime race both passed; no tg-runtime edits.
+Accounting finalized before integration/report; CI monitoring is left to the user.

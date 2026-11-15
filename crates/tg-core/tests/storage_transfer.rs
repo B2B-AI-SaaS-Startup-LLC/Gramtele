@@ -105,6 +105,7 @@ fn upload(size: usize, kind: u::UploadKind) -> u::PreparedUpload {
         video_cover: None,
         attached_stickers: Vec::new(),
         force_file: false,
+        preparation_lease: None,
     }
 }
 fn upload_effects(m: &mut u::Uploader, now: i64) -> Vec<u::Effect> {

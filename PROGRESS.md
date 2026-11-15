@@ -1835,3 +1835,39 @@ Native76 repeated identical/4source hashes, map248/212done36partial test refs an
 ledger4partial, unchanged dependencies/lock, diff --check PASS. Known runtime race
 passed locally; tg-runtime untouched. Accounting updated before commit/report.
 CI monitoring/restarts are left to the user as requested.
+
+## Storage prepare — local files / media rules (port/storage-prepare)
+
+Своя ветка/worktree от main ef615ab, включая ba1c576 Xvfb -noreset и ef615ab
+wait_compact.4 requested originals2336LOC прочитаны с usage/dependencies.
+[Карта](crates/tg-core/docs/storage-prepare-map.md):262rows151done111partial0pending;
+[handoff](docs/handoffs/codex-storage-prepare.md). Каждый partial имеет адрес/тест.
+FilePrepareResult (FileLoadResult/SendMediaReady в pin отсутствуют), TL-атрибуты/
+voice/song/video/round/sticker/photo metadata, fixed32KiB parts/MD5 append semantics,
+существующий document part_layout; классификация, пороги/геометрия/JPEG decision.
+Реальные filesystem validation, error callbacks,10+deferred files, PreparedList/
+PreparedFile/SendFilesWay predicates/groups/slowmode/caption/HD/bundles. Настоящие
+TaskQueue worker на tg-runtime/MainQueue, cancel/finish/reentry/virtual stop;
+SendingAlbum music/media/key state. Реальный archive writer и PreparedUpload lease/
+удаление временного файла. Никаких fake Session/History/decoder или новых event loops.
+Native160 exact repeated rows,10source hashes: whole original HashMd5 + actual
+setFileData/setThumbData и pure rules. Документные parts reuse13 native layout
+cases storage-transfer.19новых tests;4target filespartial (pixels/editor5/codecs7,
+MIME/name33,caption01/18,API/Session26/29).2attach_prepare filespartial5,2pure
+SendFilesWay filesdone tg-core3; core/utils остаётся partial4. Старые4 transfer
+map rows закрыли prepare3/4, остаются5/7/29 (map248/212/36 unchanged).
+Source quirks сохранены: deferred>10, append parts/empty no-clear, dropping list
+metadata, None ranges, memory-only animation flag и строгие пороги. Фактические
+кодеки/пиксели не проверены, Needs обозначает настоящий недостающий этап.
+Зависимости/manifest/lock/области Claude не изменены. Новые X-серверы не запускались.
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:1013 successful (1009 regular +4
+inherited isolated child results),0failed,3existingignored.19 new tests. One
+completed final workspace run: /tmp/storage-prepare-final-workspace-checks.log.
+Earlier attempts were interrupted for actual TL flags/shared-state/callback-lock
+corrections; some had reached cache tests, no failed test results were hidden.
+Final run includes all fixes and the reentrant archive progress regression.
+Native160 repeated identical/10source hashes, map262/151done111partial refs and
+ledger/scope/diff audits PASS. Dependencies/lock unchanged; ba1c576/ef615ab preserved.
+Private XCB test and known runtime race both passed; no tg-runtime edits.
+Accounting finalized before integration/report; CI monitoring is left to the user.

@@ -63,3 +63,8 @@ pub mod raw;
 pub mod data_group_call;
 
 pub mod data_media_preload;
+
+pub mod data_passkey_deserialize;
+pub mod data_reply_preview;
+pub mod data_search_controller;
+pub mod data_streaming;

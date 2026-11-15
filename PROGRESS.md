@@ -1,5 +1,35 @@
 # Прогресс
 
+## port/data-small — Passkeys / RecentPeers / streaming / search / preview
+
+Своя ветка/worktree от main7bc4737,10 целевых файлов1908 строк прочитаны с usage.
+Passkeys все service/TL/callback/cache/deadlines/login/DC/key phases; необходимый
+passkey_deserialize2 полностью + platform WebAuthn result values (header partial33).
+RecentPeers список/события/Qt frame48/rollback/weak thread history32, streaming
+weak sharing/forceRemote/alternate quality metadata/retention Timer, search все
+request/parse/cache/slices/migration/save/restore/debounce data-фазы на существующих
+SparseIdsList/builders. ReplyPreview только чистая геометрия; целого fake класса нет.
+Карта data-small-map.md:164 строки136 done/28 partial/0 pending. Целевые ledger:
+2 done/8 partial; зависимости deserialize2 done, platform WebAuthn header partial.
+
+Остатки: настоящий PeerCodec Serialize::peer13/29; реальные Thread08/16/18 и
+HistoryItem/Histories insertion/facts/events/scheduler18–20/26; Session/AppConfig29/
+платформенный WebAuthn33; userpic cache/Image/ReplyPreview Prepare/loaded/state5,
+thumbnail loader3/4, реальные Reader/Document/streaming loaders/cache этап7.
+Нет fake Session/History/Thread/Image/streaming backend types; required contracts
+не имеют default fake реализации. Pointer/lifetime UB диагностируется в Rust.
+Source quirks сохранены:48 только на диске, passkeys strict deadlines/fail timestamp,
+разное base64 padding register/login, request fail latch, старый debounce timer после
+cached/fast query, null global notModified precondition. QttoInt U3000 native-tested.
+
+Native135 exact rows twice/16 hashes; полный source passkey JSON cpp, actual pure
+TL/handle/filter fragments, request offset fragments, geometry со style inputs.
+Остальное own tests+чтение; Session/peer codec/History/loader/UI не native-proven.
+19 новых tests; зависимостей/manifest/lock изменений нет. Подробности и все границы:
+docs/handoffs/codex-data-small.md. Claude и чужие ветки/файлы не тронуты.
+FINAL_DATA_SMALL_PROGRESS_CHECK_PENDING
+
+
 ## port/data-calls-notify — GroupCall / NotifySettings / preload / графики
 
 Своя ветка от main2f58312. Все10 целевых файлов/3170 строк прочитаны;

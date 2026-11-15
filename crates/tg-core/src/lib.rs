@@ -9,3 +9,5 @@ pub mod ayu;
 pub mod core;
 
 pub mod statistics;
+
+pub mod platform;

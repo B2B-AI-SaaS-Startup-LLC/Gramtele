@@ -1,0 +1,18 @@
+{
+  "data/components/passkeys.cpp": "1eb092d51913c49eb9a3c52c401a5bc8395d49c58ef7847d42c51241a782331f",
+  "data/components/passkeys.h": "678f3b02407c65194734ccbc0d36fe0b50406b2f06b490c9b8904cdc0bc9afc1",
+  "data/components/recent_peers.cpp": "ba461ba183ca1471e8a7e71b0dd77655625d6d753cb5eca31e796e719ece7399",
+  "data/components/recent_peers.h": "007c2c626b5b9cc64973f491722ed72fbc900f19415eac7f4441d3c403b81d39",
+  "data/data_passkey_deserialize.cpp": "0b7d41bc2f7648c3f663450679e99c2603b93b78fa654441fd84cf2ef2b13445",
+  "data/data_passkey_deserialize.h": "134d4ea28aaa9371b388f8014ee4eb9d6e42ce3b95686b2fa3793baa9e6ed770",
+  "data/data_reply_preview.cpp": "1305989c44d86bf53aaa846c467a8adf52d60f8901c2d6c5a43aa6c4b3ecc356",
+  "data/data_reply_preview.h": "bf77430db982768ce4348120c9f9123c61ee1676c31b29e9c244e15d328f495e",
+  "data/data_search_controller.cpp": "f82500bf1809889736245cd73f95e26069fc59a1461bce0eb8e0371f7de40590",
+  "data/data_search_controller.h": "7870ba7cfc1cbbad66565bb7d6c6fe64ad29fb562c9a9e34f8bb382e17e6fc6c",
+  "data/data_streaming.cpp": "45c91b573633376509aa0842bb88bdc6ffd96ff5634c8db5fdb69447e8422dde",
+  "data/data_streaming.h": "5b22a1e234de8868a76ea74cb6f7342932a4bd601fa4b228da5d585ae2e4a9d0",
+  "data/data_types.h": "0e27c27349bf037989167340998279eba0a5b7c91ca93c3154af83898b7a324a",
+  "mtproto/scheme/api.tl": "7655504c25a5d3a368e7729d3e9e64afffcacbcb54ec85508c60f0472064b617",
+  "platform/platform_webauthn.h": "54d7e665bad21e9510d7d48c9375dc84dc4ae107433b020a1ea36988533f8a15",
+  "storage/storage_shared_media.h": "20f9c04d9fa8d9bb19986945154e2475a0c659ef8a82face93eeadcb514fd529"
+}

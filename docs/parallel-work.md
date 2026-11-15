@@ -145,3 +145,14 @@ raw country table/SegmentTree done. Native400 rows; Session/model state own test
 (892+1 child)/0failed/3existingignored, tg-core248 включая4doctests. Runtime race
 не проявилась, чужой runtime не менялся. Map/hash/repeated-native/diff PASS.
 Интеграция только своей ветки после проверок; main+ветка в gramtele без force.
+
+
+Срез port/data-small от main7bc4737, отдельный worktree data-small:
+[handoff](handoffs/codex-data-small.md), [карта](../crates/tg-core/docs/data-small-map.md)
+164 строки136 done28partial0pending. Source10files1908LOC + deserialize2/real
+platform result values. Native135 exact rows twice/16hashes,19newtests. PeerCodec13/29,
+History/Thread08/16/18–20/26, Session/WebAuthn29/33, UI5/thumbnails3/4/streaming7
+backends явно partial, без stand-in records. Только tg-core/свой учёт, dependencies/
+manifest/lock и Claude/foreign worktrees не менялись.
+FINAL_DATA_SMALL_PARALLEL_CHECK_PENDING
+Интеграция только собственной ветки после проверок; main+ветка в gramtele без force.

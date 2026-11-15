@@ -1582,3 +1582,33 @@ clippy --workspace --all-targets -D warnings PASS; test --workspace PASS:
 843 successful (842+1 child),0failed/3 прежних ignored,34 новых tests.
 Лог /tmp/data-misc-verified-workspace-checks.log. Все Source hashes/native repeat/
 map references/git diff --check PASS. Учёт обновлён до коммита и отчёта.
+
+
+## port/data-lists — списки и сервисные модели
+
+База9575f65;16 файлов/4043 LOC, ledger12done/4partial. MessagesList/positions,
+Messages/Sparse builders, merged/unsorted slices, реальные storage SharedMedia и
+UserPhotos viewers, WithLast модели/routing/reverse, весь PtsWaiter с точными
+owner effects, все Premium/Level limits, BusinessInfo TL/state/rollback/events/
+Sender/timezones, scalar StickersSet/flags/thumbnail metadata/document lookup.
+Хранилища из storage повторно не реализованы, fake Session/History/UserData нет.
+Полные History18–20/scheduled05/SavedMusic12, CloudFile loader3/4 и image/EmojiPtr5
+перечислены как partial с адресами пакетов. API timer/application26 и реальные
+owners02/29 — обязательные узкие контракты без пустых production providers.
+
+Карта crates/tg-core/docs/data-lists-map.md:511rows483done/28partial/0pending,
+каждая done-строка с проверенной ссылкой на тест. Native вне клона804 точных строк,
+два одинаковых capture,21 source hashes. Реальные messages/sparse cpp и business
+ToMTP/premium getter bodies; AppConfig/premium/empty-recipients seams явно
+ограничены. Full-owner probes упираются в отсутствующий generated emoji.h.
+25 новых tests; targeted PASS. Особенности исходника (similar channels getter,
+MessagesList decrement/overcount, timezone request latch, shortcut0 local-only)
+сохранены. C++ optional/iterator UB и pointer allocation order не объявлены
+доказанными. Подробности docs/handoffs/codex-data-lists.md.
+Новых зависимостей/manifest/lock edits нет; Claude/foreign files не менялись.
+Финальные три проверки через nix develop PASS: fmt --check, clippy --workspace
+--all-targets -D warnings, test --workspace (868successful=867+1child,0failed,
+3existingignored),25 новых tests/tg-core223. Логи /tmp/data-lists-workspace-checks.log
+и /tmp/data-lists-final-lints.log. Известная runtime race не воспроизвелась.
+Source hashes/native repeat/map references/diff --check PASS; учёт до коммита.
+Интеграция только своей ветки fast-forward в main, push обеих без force.

@@ -1,0 +1,23 @@
+{
+  "data/business/data_business_common.cpp": "dbfc1a2a076eefd56964adf72c3b2844f9f006e6577a1044ad006caef8a9550e",
+  "data/business/data_business_common.h": "b115008c90d530bdcbb7642886523ff875bc39e22509a14299e93d0b24d8ee72",
+  "data/business/data_business_info.cpp": "b20c1b18a446c64c87fa2833006fee7b3f20d1fc77018a1f33c07f7a5139d583",
+  "data/business/data_business_info.h": "88c6535882dd7550f328096d5a434d6c0284e2c5f09f271d590ac3a612468405",
+  "data/data_abstract_sparse_ids.h": "93fa7a84aa5be9c7f09667ba8038f6c425bb3a1fa927c95cd25c9c1ca317ffb4",
+  "data/data_messages.cpp": "e35c234da5afc3ba9038fc59c31aa50ffe593589d5cbb956c82081beb3ede8f3",
+  "data/data_messages.h": "864f3aec084b18a1bde2affb21512c117699250755903ec56a2c7dd9c51d07ca",
+  "data/data_msg_id.h": "6dfda36c0a01b96743904927a0c0f07ca8c22aa1099f38a254cf120e8836e4fd",
+  "data/data_peer_id.h": "b1d2df27cf8f9e921211e37c21c388f6bd1b6a3a23cc02263f69529b6d5ff501",
+  "data/data_premium_limits.cpp": "5e1384ed11efa5f6c041c0e7d4fcdb03c6ecb047654d858910bd6545e89e2e8a",
+  "data/data_premium_limits.h": "0f7949f0d8a68b8bda8f7d108736fe32ec519fc561bdc4196e9524a7031344ad",
+  "data/data_pts_waiter.cpp": "5f4d779d6d5b7359349b3b59e5f01d14051ba2f20c9ad62f845fb4641c7fe306",
+  "data/data_pts_waiter.h": "9427a5335aa6b5f0e7cd42efcd783fc48892a53e4bd76f87ca4d37ca6cf8b7b6",
+  "data/data_sparse_ids.cpp": "a04a3d7438fb9907b72c37a1b66c76142590dd03ccf9f678caedda854e76e196",
+  "data/data_sparse_ids.h": "82e3106529fb24504c951191a466387f131f46190202160c6b719a4694fbed44",
+  "data/data_user_photos.cpp": "a5807aed3f9753cf460d7485318d6e4d7a6987a8e544e87b3587b0ed944a32d6",
+  "data/data_user_photos.h": "7c335f08e1cf1284ca1955cf156932aed0014fb9fe6ba7f4535494a6e6c52b5f",
+  "data/stickers/data_stickers_set.cpp": "9a2d328d5afb3818921be232173997294c3d2d317fffc3e9e67226234f108526",
+  "data/stickers/data_stickers_set.h": "133050a3bc14b9ab9907592b925e14aa0a7e44394ea07e51d08668d66132c4d0",
+  "mtproto/scheme/api.tl": "7655504c25a5d3a368e7729d3e9e64afffcacbcb54ec85508c60f0472064b617",
+  "storage/storage_sparse_ids_list.h": "42d3362ea4ad36c18cb84790d5a7143431a4d3944adb37cb5134868f4261b3a4"
+}

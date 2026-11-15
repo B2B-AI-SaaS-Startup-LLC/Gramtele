@@ -115,3 +115,20 @@ lang/countries/credits/tg-ui/codegen/runtime/mtproto и storage/localstorage, а
 
 Финальные три проверки data-misc workspace PASS:843successful,0failed,3 старых
 ignored;34 новых tests. Известная runtime race локально не воспроизвелась.
+
+
+Срез port/data-lists от main9575f65, отдельный worktree data-lists:
+[handoff](handoffs/codex-data-lists.md),
+[карта](../crates/tg-core/docs/data-lists-map.md).16files4043LOC,12done/4partial,
+511map rows483done/28futurepartial/0pending. Actual storage reuse, no fake owners,
+25new tests,804native rows/21source hashes. History18–20 + scheduled05/SavedMusic12,
+loader3/4/pixels/EmojiPtr5 и настоящие API26/owner02/29 bindings остаются по карте.
+Claude lang/countries/credits/tg-ui/codegen/runtime/mtproto/localstorage и чужие
+worktrees/ветки не менялись и не интегрируются. Новых зависимостей нет.
+Интеграция только port/data-lists после проверок, push main+ветки в gramtele
+без force. Известную runtime thread-drop race не исправлять в этом пакете.
+
+Финальные fmt/clippy/test workspace data-lists PASS:868successful(867+1child),
+0failed/3existingignored,25 новых tests. Native804 exact rows twice,21hashes,
+maprefs/diffchecks PASS. Full workspace tests пройдены один раз после завершения
+пакета; финальный lint cache проверяет последние source/key изменения.

@@ -1720,6 +1720,9 @@ name = "tg-base"
 version = "0.0.0"
 dependencies = [
  "aes",
+ "async-channel",
+ "async-trait",
+ "base64 0.22.1",
  "bytemuck",
  "crypto-bigint",
  "crypto-primes",

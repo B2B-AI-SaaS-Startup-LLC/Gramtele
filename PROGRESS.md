@@ -1721,3 +1721,40 @@ isolated child results),0failed,3existingignored. One full final workspace run,
 final source/native adjustments. Final native263 exact rows twice,34 sourcehashes,
 all map file/test references and git diff --check PASS. Runtime race did not
 reproduce; tg-runtime unchanged. Accounting updated before commit/report.
+
+## port/base-linux — platform Linux, part2
+
+Базаf926e45; та же своя ветка/worktree после разрешённого fetch/reset.
+11 originals3536LOC:4done/7partial, плюс mpris.xml/common contracts;22sourcehashes.
+[Карта](crates/tg-base/docs/platform-linux-2-map.md):265rows216done49partial0pending,
+[handoff](docs/handoffs/codex-base-linux-2.md). Part1map обновлена209/146/63:
+реальные screen-saver query/reset, WM/X11/Xwayland probes и activation protocol
+закрывают прежние Stage1/part2 пункты; Qt entrypoints остаются5.
+
+Реальные optional dlopen XCB/RECORD/keysyms, RAII lifetime, WM/chunked properties,
+event masks/timestamps/map/restack/send, полный Xsettings parser/state/subscriptions,
+295unique key mappings, Linux shortcut singleton/API, настоящий MPRIS root/player/
+ObjectManager на zbus с MainQueue/RPL без borrow при fire. Девять новых tests +2child;
+Xvfb/XTEST/XRecord/Xsettings и private dbus-daemon, без user DISPLAY/session bus.
+Native391exact cases/295 table pairs, repeat identical; ELF без XCB/Qt/GIO NEEDED.
+
+Partial5: Qt connection/notifier/nested dispatcher/focus/WId, NativeText, QImageJPEG87
+и actual application facts. Allocation tracer explicitly partial1/allocator-tracer-
+hooks: глобальные malloc loggers/interposition вне разрешённого тестового режима,
+definitions отсутствуют в pinned tree; fake enabled tracer API нет. В оригинале
+есть RECORD, XInput нет. Source bugs/mask/serial/Color/overflow/ignored track ID/
+zero-duration/no-op методы сохранены; safe refusals вместо C++ invalid-memory UB
+и отличия async/MainQueue расписания честно описаны в handoff.
+
+Direct async-channel/async-trait/base64 используют уже существующий lock;
+новых packages/версий нет. Dev shell Xvfb/libxcb/keysyms, CI installs test deps;
+link/header build-time dependency на XCB отсутствует. Claude/runtime/foreign ветки
+не менялись. CI пользователь дожидается сам, известную race не исправлять.
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:937 successful (933 regular +4
+isolated child results),0failed,3existingignored. One full final workspace run:
+/tmp/base-linux-2-workspace-checks.log. Nine new tests +2child; final focused
+clippy/tests also passed. Native391 JSON cases/295 key pairs repeated identically;
+22 source hashes/map refs/package-version audit/diff --check PASS. Known runtime
+race passed locally; runtime untouched. Accounting updated before commit/report.
+CI monitoring/restarts are left to the user as explicitly requested.

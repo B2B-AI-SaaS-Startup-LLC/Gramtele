@@ -26,6 +26,9 @@ nix = { version = "0.31", features = ["fs", "signal"] }
 
 [target.'cfg(all(unix, not(target_os = "macos")))'.dependencies]
 zbus = "=5.19.0"
+async-trait = "0.1"
+async-channel = "2.5"
+base64 = "0.22"
 futures-core = "0.3"
 
 [target.'cfg(windows)'.dependencies]

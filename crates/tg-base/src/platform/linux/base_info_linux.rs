@@ -284,3 +284,27 @@ pub fn system_language(locale_name: &str, ui_languages: &[String]) -> String {
 }
 pub fn start(_settings: serde_json::Value) {}
 pub fn finish() {}
+
+/// Actual headless XCB branch; Qt/native-display selection remains stage5.
+pub fn headless_is_x11() -> bool {
+    static RESULT: OnceLock<bool> = OnceLock::new();
+    *RESULT.get_or_init(|| {
+        super::base_linux_xcb_utilities::shared_connection().is_some_and(|c| !c.has_error())
+    })
+}
+pub fn xcb_desktop_facts(connection: &super::base_linux_xcb_library::Connection) -> DesktopFacts {
+    DesktopFacts {
+        window_manager: super::base_linux_xcb_utilities::window_manager(connection),
+        x11: !connection.has_error(),
+        wayland: false,
+        xwayland: connection.extension("XWAYLAND").is_some(),
+    }
+}
+
+pub fn headless_is_xwayland() -> bool {
+    static RESULT: OnceLock<bool> = OnceLock::new();
+    *RESULT.get_or_init(|| {
+        super::base_linux_xcb_utilities::shared_connection()
+            .is_some_and(|c| c.extension("XWAYLAND").is_some())
+    })
+}

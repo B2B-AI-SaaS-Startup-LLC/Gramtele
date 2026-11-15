@@ -176,3 +176,23 @@ all map file/test references and git diff --check PASS. Runtime race did not
 reproduce; tg-runtime unchanged. Accounting updated before commit/report.
 Интеграция только собственной ветки после проверок, push main+ветка gramtele
 без force. Известную runtime thread-drop race не исправлять.
+
+Срез port/base-linux part2 от f926e45 прямо разрешён пользователем: прежняя
+part1-резервация XCB/global_shortcuts/system_media/allocation закрывается этой
+задачей, scope Claude/runtime остаётся неприкосновенным. Свой прежний worktree,
+fetch/reset main выполнен.11files3536LOC4done7partial;22sourcehashes,
+[map](../crates/tg-base/docs/platform-linux-2-map.md)265rows216done49partial0pending,
+[handoff](handoffs/codex-base-linux-2.md). Native391/295keypairs,9tests+2child,
+actual private Xvfb/RECORD/Xsettings and real MPRIS private-bus export. Qt5 и
+explicit allocator-interposition1 остаются по адресам карты, без fake APIs.
+Part1 XCB Stage1 boundaries закрыты, map1 теперь209/146/63.
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:937 successful (933 regular +4
+isolated child results),0failed,3existingignored. One full final workspace run:
+/tmp/base-linux-2-workspace-checks.log. Nine new tests +2child; final focused
+clippy/tests also passed. Native391 JSON cases/295 key pairs repeated identically;
+22 source hashes/map refs/package-version audit/diff --check PASS. Known runtime
+race passed locally; runtime untouched. Accounting updated before commit/report.
+CI monitoring/restarts are left to the user as explicitly requested.
+Интеграция только своей ветки после проверок, main+port/base-linux gramtele без
+force. CI пользователь смотрит/перезапускает сам; известный runtime race не чинить.

@@ -44,6 +44,13 @@ impl LastInput {
             }
         }
     }
+    pub fn platform(connection: Connection) -> Self {
+        Self::new(connection, || {
+            let c = super::base_linux_xcb_utilities::shared_connection()?;
+            let idle = c.screen_saver_idle()?;
+            Some(tg_runtime::now().wrapping_sub(idle as i64))
+        })
+    }
     pub fn install(self: Arc<Self>) {
         crate::platform::base_platform_last_input::set_provider(Some(Box::new(move || {
             self.last_user_input_time(tg_runtime::now())

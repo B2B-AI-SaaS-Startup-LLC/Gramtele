@@ -9,6 +9,10 @@ use std::{
 pub struct Library {
     handle: NonNull<libc::c_void>,
 }
+// SAFETY: loader handles permit concurrent dlsym; Drop requires exclusive ownership.
+unsafe impl Send for Library {}
+// SAFETY: shared borrows prevent dlclose while a symbol lookup is in flight.
+unsafe impl Sync for Library {}
 pub struct Symbol<'a> {
     pointer: NonNull<libc::c_void>,
     _library: PhantomData<&'a Library>,
@@ -60,7 +64,7 @@ pub fn process_has_symbol(name: &str) -> bool {
     }
 }
 /// Signature validation stays inside this FFI module, never in application code.
-unsafe fn function<T: Copy>(lib: &Library, name: &str) -> Option<T> {
+pub(super) unsafe fn function<T: Copy>(lib: &Library, name: &str) -> Option<T> {
     let symbol = lib.symbol(name)?;
     assert_eq!(
         std::mem::size_of::<T>(),

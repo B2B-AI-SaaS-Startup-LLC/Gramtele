@@ -232,3 +232,29 @@ impl PowerSaveBackend for LinuxPowerSaveBackend {
             .on_queue(&self.queue, move |c| c.prevent(ty, false, ""));
     }
 }
+
+pub struct XcbPowerWindowBackend {
+    connection: Rc<super::base_linux_xcb_library::Connection>,
+    parent: Box<dyn Fn() -> String>,
+}
+impl XcbPowerWindowBackend {
+    pub fn new(
+        connection: Rc<super::base_linux_xcb_library::Connection>,
+        parent: impl Fn() -> String + 'static,
+    ) -> Self {
+        Self {
+            connection,
+            parent: Box::new(parent),
+        }
+    }
+}
+impl PowerWindowBackend for XcbPowerWindowBackend {
+    fn parent_window_id(&self) -> String {
+        (self.parent)()
+    }
+    fn reset_xcb_screen_saver(&self) {
+        if !self.connection.has_error() {
+            self.connection.reset_screen_saver();
+        }
+    }
+}

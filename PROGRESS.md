@@ -1959,3 +1959,45 @@ ledger22/3756 and scope/dependency/diff audits PASS. Actual private XCB and know
 runtime thread-drop race passed locally; protected crates untouched. Dependencies/
 lock unchanged. Accounting completed before commit/integration/report. CI is left
 to the user as requested.
+
+## Data downloads — stage4 slice (port/data-downloads)
+
+Base7dbd935;14 requested originals4263LOC allpartial for explicit future owners/
+UI, no pending pure-function rows. [Map](crates/tg-core/docs/data-downloads-map.md)
+378rows205done173explicitpartial0pending;
+[handoff](docs/handoffs/codex-data-downloads.md) accounts for all14 files.
+Core queue/progress/restore batches/external callbacks/visibility/clear/FileLoader
+bridge, exact Qt_5_1 downloads codec, file open/save/cancel decisions and filesystem
+export whitelist, send-action manager coordination, calendar cache/pagination,
+AI tones service and community membership/date/order/link/collapse phases ported.
+
+Remaining:16/18–20 real History/generation/IV/media resolution;29 Session/Account/
+localstorage/async worker/Sender reply application and descriptor capture;
+01/question1 internal tone examples/marked community preview;5/6/7 actual UI,
+ClickHandler/SendActionPainter statuses/deadlines/phases/images/player/preview;
+33 MIME, platform file access/launch and local-calendar/DST. No fake Core models,
+no no-op trait implementations, no internal entities/Credits clone. Tone examples
+are existing raw TL only; no production UTC provider. Mutations close borrows
+before signals/effects; collapsed old-list removals and one flag flip are separate.
+
+Native164 repeated exact rows/6hashes +4 inverse Rust→actual C++ byte-exact frames;
+23newtests include real Sender/Instance memory replies and actual FileLoader.
+Preserved32-bit size truncation/TimeId narrowing, all-or-nothing rejection, path
+dedup, double deleteAll writes, duplicate document-index behavior, first-item
+external lookup, live reverse cancellation loops and calendar/tones ordering.
+Cross-entity order/ties use scoped keys rather than pointer addresses. Full owner/
+UI/media/local timezone and Qt filesystem edge cases remain explicitly unverified.
+Dependencies/lock/protected Claude files/foreign worktrees unchanged; prior
+ba1c576/ef615ab fixes retained. Native uses only synthetic bytes; no user tdata.
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:1093 successful (1089 regular
++4 inherited isolated child results),0failed,3existingignored.23 new tests.
+One completed full final run: /tmp/data-downloads-final-workspace-checks.log.
+An earlier workspace attempt was stopped during clippy before tests for deletion
+fidelity fixes; the final run includes all subsequent queue/callback/collapse and
+full RPC-error changes. Final focused clippy/23tests also PASS. Native164 repeat
+rows/6source hashes +4 inverse original-reader byte-exact frames; map378/205done/
+173explicitpartial links/test refs, ledger14/4263, scope/dependency/diff audits PASS.
+Actual private XCB and known runtime thread-drop test passed locally; protected
+crates unchanged. Dependencies/lock unchanged, ba1c576/ef615ab retained. Accounting
+completed before commit/report. CI monitoring/retries are left to the user.

@@ -306,3 +306,26 @@ lock unchanged. Accounting completed before commit/integration/report. CI is lef
 to the user as requested.
 Integrate only own branch after checks, atomic main+port/data-themes gramtele push
 without force; CI monitoring/retries left to user, runtime race not fixed here.
+
+Срез port/data-downloads от main7dbd935, отдельный worktree data-downloads:
+[handoff](handoffs/codex-data-downloads.md), [map](../crates/tg-core/docs/data-downloads-map.md)
+378rows205done173explicitpartial0pending;14originals4263LOC file-levelpartial for
+01/question1/13–14/16/18–20/29/33/5–7 actual owners/backends.23newtests/native164
+repeat/6hashes +4 Rust→original exact frames. Actual storage FileLoader and typed
+Sender/Instance memory replies; no fake History/Session/painter or entity/credits
+clone. Только tg-core и свой учёт, no new dependencies/lock/protected Claude or
+foreign worktree edits. Existing Xvfb-noreset/cache compactor fixes retained.
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:1093 successful (1089 regular
++4 inherited isolated child results),0failed,3existingignored.23 new tests.
+One completed full final run: /tmp/data-downloads-final-workspace-checks.log.
+An earlier workspace attempt was stopped during clippy before tests for deletion
+fidelity fixes; the final run includes all subsequent queue/callback/collapse and
+full RPC-error changes. Final focused clippy/23tests also PASS. Native164 repeat
+rows/6source hashes +4 inverse original-reader byte-exact frames; map378/205done/
+173explicitpartial links/test refs, ledger14/4263, scope/dependency/diff audits PASS.
+Actual private XCB and known runtime thread-drop test passed locally; protected
+crates unchanged. Dependencies/lock unchanged, ba1c576/ef615ab retained. Accounting
+completed before commit/report. CI monitoring/retries are left to the user.
+Integrate own branch only after checks, atomic main+port/data-downloads gramtele
+push without force; CI user monitors/retries, known runtime race untouched.

@@ -284,3 +284,25 @@ Claude files/foreign branches/manifests/lock не менялись; ba1c576/ef61
 actual private XCB и известный runtime race PASS. Только свою ветку интегрировать
 через main fast-forward, atomic push main+port/data-user gramtele без force.
 CI проверяет/перезапускает пользователь; runtime не исправлять в этой задаче.
+
+Срез port/data-themes от main06df1c5, отдельный worktree data-themes:
+[handoff](handoffs/codex-data-themes.md), [map](../crates/tg-core/docs/data-themes-map.md)
+410rows296done114partial0pending;22originals3756LOC10done12partial. Native588
+repeat-exact/13hashes +7 inverse Rust→actual original reads/writes;20newtests.
+01/question1/24 CreditsAmount+Api gift parser/29 Session/23 SendAction/5–6 UI/
+3–4–7 media bindings explicitly partial. Только tg-core и свой учёт; protected
+Claude crates/lang/credits/foreign worktrees/manifests/lock unchanged. Existing
+ba1c576/ef615ab retained. nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:1070 successful (1066 regular
++4 inherited isolated child results),0failed,3existingignored.20 new tests.
+One completed full final run: /tmp/data-themes-final-workspace-checks.log.
+Earlier attempts were interrupted at test compilation for extra factory coverage
+and during tests for the reentrant first-callback fix; no failed tests were hidden.
+Final run includes both changes. Native588 repeated identical/13source hashes +7
+inverse Rust→actual C++ byte-identical samples, map410/296done114partial references,
+ledger22/3756 and scope/dependency/diff audits PASS. Actual private XCB and known
+runtime thread-drop race passed locally; protected crates untouched. Dependencies/
+lock unchanged. Accounting completed before commit/integration/report. CI is left
+to the user as requested.
+Integrate only own branch after checks, atomic main+port/data-themes gramtele push
+without force; CI monitoring/retries left to user, runtime race not fixed here.

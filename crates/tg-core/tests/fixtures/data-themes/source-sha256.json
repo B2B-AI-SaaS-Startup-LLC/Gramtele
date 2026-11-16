@@ -1,0 +1,15 @@
+{
+  "data/data_wall_paper.h": "67ed01be6fc61a1a0219a55dfabf8211313ad0381819bf9a76b5f84ae31a8fe0",
+  "data/data_wall_paper.cpp": "898c7122470f7e9321a18bab9643b233e8cb96953aaacd42c6eec79c309d636e",
+  "storage/serialize_common.h": "830e9df1fd1a79490d18b610d65658a6ed03eb356a7f6a46d4bab98d977ee635",
+  "ui/color_int_conversion.h": "60b5b3f211daff338dc04b8529528ccead4b9cafa3f2ceae60d066c0e57d6c5e",
+  "ui/color_int_conversion.cpp": "c7ba0883b43ac574d2a2b444cdec67fc1ac16dcc810b6c6b653aa7caaad67ba4",
+  "mtproto/scheme/api.tl": "7655504c25a5d3a368e7729d3e9e64afffcacbcb54ec85508c60f0472064b617",
+  "core/utils.h": "609106bddfb64d205556e0e98c72d3da0ba4652186a7c5f4f0cc0769bc23a9ee",
+  "data/data_types.h": "0e27c27349bf037989167340998279eba0a5b7c91ca93c3154af83898b7a324a",
+  "data/data_star_gift.h": "3cf8d7d2fe77f28772c16ed59f36a743f42d907c9df837bfee23c83cec3fce88",
+  "data/data_star_gift.cpp": "8f5ca7a20785bfe5ccbbd12d2cf5b00634bcfb349d90a2e97de631d1b650c977",
+  "data/data_msg_id.h": "6dfda36c0a01b96743904927a0c0f07ca8c22aa1099f38a254cf120e8836e4fd",
+  "generated/scheme.h": "932900f0a199ded47fd232f42ae23d8fbd811040e9f00d824ae365e746eb3dec",
+  "generated/scheme.cpp": "fd675f85cb9c668bc7c11f83758e084251306712931f29b1b8fd01a74ac02e1c"
+}

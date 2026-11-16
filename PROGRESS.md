@@ -1922,3 +1922,40 @@ Native/map/refs/ledger/scope/diff audits PASS. Зависимости/manifest/l
 Claude не менялись; ba1c576/ef615ab сохранены, privateXCB/runtime race PASS.
 Учёт закрыт перед commit/интеграцией/отчётом; только своя ветка, main fast-forward,
 push main+port/data-user gramtele без force. CI пользователь проверяет сам.
+
+## Data themes — stage4 slice (port/data-themes)
+
+Base06df1c5;22 requested originals3756LOC:10done12partial. Headless wallpaper
+current/legacy QDataStream/URL/TL, CloudThemes real timer/typed requests/effects,
+gift values/requests/counter merge, statistics/subscriptions/game/report/colors/
+rotation and recent components are ported. Stable scoped media/peer identity,
+no fake Session/History/Window/decoder, no internal TextWithEntities/Credits clone.
+[Map](crates/tg-core/docs/data-themes-map.md)410rows296done114explicitpartial0pending;
+[handoff](docs/handoffs/codex-data-themes.md) lists every requested file and boundary.
+
+Remaining partials: wallpaper local thumbnail/pixels5 and document download3/4/7,
+actual Session29; CloudThemes Window/preview/emoji index5/6, loader3/4/7, gift parser24,
+owner subscriptions29; gift internal messages/lang01/question1, CreditsAmount/Api24
+(Claude), ColorCollectible/render5, complete slice producers/owner29; recent inline
+storage/owner3/4/29, recent gifts parser/reply owner24/29 and toasts01/5; location
+actual SendAction23/UI5. Generic weak registry has no invented action/widget body.
+
+Native588 repeated identical rows/13hashes +7 Rust-created wallpapers read/written
+byte-identically by original C++;20newtests. Stateful owners remain own tests+
+reading. Preserved ignored version/legacy owner words/null UTF16, testing-link
+missing '=' and ignored dark prefix, gift request failure latch/pin limit1 off-by-one,
+first duplicate counter wins. Pointer order→stable key order and date timezone/
+extended-color/rendering boundaries are explicit in handoff. Dependencies/lock,
+Claude scope and other worktrees untouched; ba1c576/ef615ab retained.
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:1070 successful (1066 regular
++4 inherited isolated child results),0failed,3existingignored.20 new tests.
+One completed full final run: /tmp/data-themes-final-workspace-checks.log.
+Earlier attempts were interrupted at test compilation for extra factory coverage
+and during tests for the reentrant first-callback fix; no failed tests were hidden.
+Final run includes both changes. Native588 repeated identical/13source hashes +7
+inverse Rust→actual C++ byte-identical samples, map410/296done114partial references,
+ledger22/3756 and scope/dependency/diff audits PASS. Actual private XCB and known
+runtime thread-drop race passed locally; protected crates untouched. Dependencies/
+lock unchanged. Accounting completed before commit/integration/report. CI is left
+to the user as requested.

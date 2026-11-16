@@ -1871,3 +1871,54 @@ Native160 repeated identical/10source hashes, map262/151done111partial refs and
 ledger/scope/diff audits PASS. Dependencies/lock unchanged; ba1c576/ef615ab preserved.
 Private XCB test and known runtime race both passed; no tg-runtime edits.
 Accounting finalized before integration/report; CI monitoring is left to the user.
+
+
+## Data user / folders / filters (port/data-user)
+
+Своя ветка/worktree от maina236ae1.12 целевых файлов4754LOC прочитаны с usage:
+2done (data_groups.h/.cpp),10partial с явными будущими владельцами. Нужные
+UnreadState/BadgesState из dialogs_common.h перенесены как настоящие value-типы;
+ledger этого header остаётся tg-app6/partial, UI/debug/RightButton не подменяются.
+[Карта](crates/tg-core/docs/data-user-map.md):542строки380done162partial0pending;
+[handoff](docs/handoffs/codex-data-user.md) перечисляет состояние каждого файла.
+
+Concrete UserData вместо UserBase в единственном Peers, self/scope/typed-key
+контракты, поля/флаги/контакт/боты/photos/birthday/lastseen/premium/business/stars /
+gifts/names и ordered Changes/effects. Реактивные peer values/права/online
+дескрипторы, реальные существующие Chat/Channel/User stores. ChatFilter rules,
+include/exclude/pins/community, TL wire-title, порядок/лимиты/hideAll/suggested,
+настоящие typed Sender adapters, tags/links/exception queues/more-chats watch
+leases и TimerHost. Архивные top8/stories/unread/badge counters и альбомы по
+MessageKey с generation, register/refresh/reorder/edit-selection/effect order.
+Все синхронные Flags/Changes/owner callbacks вызываются после освобождения borrow.
+
+Остатки:01/question1 внутренние entities/title/note/verify descriptions/lang;
+CreditsAmount у Claude +05/13/14/23/25/29 credits owner;08 реальный Forum;
+13/14/29 полный Session/ApplyUserUpdate,18–20 History/MainList/message/view owners,
+23–28 API delivery,5/6 рисование/userpic/rows. Внутренний TextWithEntities не
+вводился: wire_title — только существующий generated TL. Нет fake Session /
+History/Forum/Qt image или no-op trait implementations. Simple bot Forum transition
+явно требует настоящего UserForumOwner; полный MainList не считается проверенным.
+
+Native183repeat-exact cases/20hashes: оригинальные чистые predicate/status/rights /
+timeout/unread тела и настоящие generated C++ TL writers. Whole Session state —
+own tests+чтение. Native подтверждает logical&&→bit0 в канальных default restrictions.
+Сохранены раздельные ContactStatus/flags, stickySelf/knowledge bits, bot negative
+version, allowsForwarding vs reactive flags, filter equality без id/pins, очистка
+StaticTitle, пропуск has_my_invites при записи, double changed при порядке,
+3h suggested fail backoff, exceptions over100, refresh album без cap10,
+отрицательные archive stories→ushort. Отдельный reentrant test проверяет
+botCommandsChanged до очистки description/version. Отличие: include/exclude
+сортируются по scoped keys вместо C++ pointer order; arbitrary allocation-order
+байты/внутренние entities/живой Session не объявлены native-эквивалентными.
+
+nix develop: cargo fmt --check PASS; cargo clippy --workspace --all-targets
+-- -D warnings PASS; cargo test --workspace PASS:1050successful
+(1046regular+4inherited child),0failed,3existingignored;37новых tests.
+Один завершённый full run: /tmp/data-user-final-workspace-checks.log. Предыдущий
+attempt остановлен до запуска тестов, на их компиляции, для source callback fix;
+окончательный прогон включает его и не скрывает ранние focused failures.
+Native/map/refs/ledger/scope/diff audits PASS. Зависимости/manifest/lock/области
+Claude не менялись; ba1c576/ef615ab сохранены, privateXCB/runtime race PASS.
+Учёт закрыт перед commit/интеграцией/отчётом; только своя ветка, main fast-forward,
+push main+port/data-user gramtele без force. CI пользователь проверяет сам.

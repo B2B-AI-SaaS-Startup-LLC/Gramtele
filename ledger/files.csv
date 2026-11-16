@@ -742,8 +742,8 @@ SourceFiles/data/data_channel_admins.h,44,tg-core,4,done
 SourceFiles/data/data_channel_earn.h,42,tg-core,4,todo
 SourceFiles/data/data_chat.cpp,652,tg-core,4,partial
 SourceFiles/data/data_chat.h,240,tg-core,4,partial
-SourceFiles/data/data_chat_filters.cpp,1213,tg-core,4,todo
-SourceFiles/data/data_chat_filters.h,277,tg-core,4,todo
+SourceFiles/data/data_chat_filters.cpp,1213,tg-core,4,partial
+SourceFiles/data/data_chat_filters.h,277,tg-core,4,partial
 SourceFiles/data/data_chat_participant_status.cpp,654,tg-core,4,partial
 SourceFiles/data/data_chat_participant_status.h,287,tg-core,4,partial
 SourceFiles/data/data_cloud_file.cpp,379,tg-core,4,partial
@@ -771,8 +771,8 @@ SourceFiles/data/data_file_click_handler.h,189,tg-core,4,todo
 SourceFiles/data/data_file_origin.cpp,381,tg-core,4,done
 SourceFiles/data/data_file_origin.h,250,tg-core,4,done
 SourceFiles/data/data_flags.h,83,tg-core,4,done
-SourceFiles/data/data_folder.cpp,430,tg-core,4,todo
-SourceFiles/data/data_folder.h,116,tg-core,4,todo
+SourceFiles/data/data_folder.cpp,430,tg-core,4,partial
+SourceFiles/data/data_folder.h,116,tg-core,4,partial
 SourceFiles/data/data_forum.cpp,641,tg-core,4,todo
 SourceFiles/data/data_forum.h,153,tg-core,4,todo
 SourceFiles/data/data_forum_icons.cpp,119,tg-core,4,todo
@@ -783,8 +783,8 @@ SourceFiles/data/data_game.cpp,13,tg-core,4,todo
 SourceFiles/data/data_game.h,24,tg-core,4,todo
 SourceFiles/data/data_group_call.cpp,1159,tg-core,4,partial
 SourceFiles/data/data_group_call.h,328,tg-core,4,partial
-SourceFiles/data/data_groups.cpp,177,tg-core,4,todo
-SourceFiles/data/data_groups.h,47,tg-core,4,todo
+SourceFiles/data/data_groups.cpp,177,tg-core,4,done
+SourceFiles/data/data_groups.h,47,tg-core,4,done
 SourceFiles/data/data_histories.cpp,1342,tg-core,4,todo
 SourceFiles/data/data_histories.h,253,tg-core,4,todo
 SourceFiles/data/data_history_messages.cpp,517,tg-core,4,todo
@@ -817,8 +817,8 @@ SourceFiles/data/data_peer_colors.h,23,tg-core,4,todo
 SourceFiles/data/data_peer_common.h,34,tg-core,4,done
 SourceFiles/data/data_peer_id.cpp,58,tg-core,4,done
 SourceFiles/data/data_peer_id.h,255,tg-core,4,done
-SourceFiles/data/data_peer_values.cpp,686,tg-core,4,todo
-SourceFiles/data/data_peer_values.h,189,tg-core,4,todo
+SourceFiles/data/data_peer_values.cpp,686,tg-core,4,partial
+SourceFiles/data/data_peer_values.h,189,tg-core,4,partial
 SourceFiles/data/data_photo.cpp,627,tg-core,4,partial
 SourceFiles/data/data_photo.h,210,tg-core,4,partial
 SourceFiles/data/data_photo_media.cpp,245,tg-core,4,partial
@@ -876,9 +876,9 @@ SourceFiles/data/data_todo_list.cpp,223,tg-core,4,todo
 SourceFiles/data/data_todo_list.h,80,tg-core,4,todo
 SourceFiles/data/data_types.cpp,166,tg-core,4,partial
 SourceFiles/data/data_types.h,418,tg-core,4,partial
-SourceFiles/data/data_unread_value.cpp,68,tg-core,4,todo
-SourceFiles/data/data_unread_value.h,30,tg-core,4,todo
-SourceFiles/data/data_user.cpp,1140,tg-core,4,todo
+SourceFiles/data/data_unread_value.cpp,68,tg-core,4,partial
+SourceFiles/data/data_unread_value.h,30,tg-core,4,partial
+SourceFiles/data/data_user.cpp,1140,tg-core,4,partial
 SourceFiles/data/data_user.h,381,tg-core,4,partial
 SourceFiles/data/data_user_names.cpp,89,tg-core,4,done
 SourceFiles/data/data_user_names.h,38,tg-core,4,done
@@ -902,7 +902,7 @@ SourceFiles/data/stickers/data_stickers.cpp,1863,tg-core,4,todo
 SourceFiles/data/stickers/data_stickers.h,335,tg-core,4,todo
 SourceFiles/data/stickers/data_stickers_set.cpp,249,tg-core,4,partial
 SourceFiles/data/stickers/data_stickers_set.h,138,tg-core,4,partial
-SourceFiles/dialogs/dialogs_common.h,170,tg-app,6,todo
+SourceFiles/dialogs/dialogs_common.h,170,tg-app,6,partial
 SourceFiles/dialogs/dialogs_community_chats_list.cpp,263,tg-app,6,todo
 SourceFiles/dialogs/dialogs_community_chats_list.h,77,tg-app,6,todo
 SourceFiles/dialogs/dialogs_community_requestable_list.cpp,158,tg-app,6,todo

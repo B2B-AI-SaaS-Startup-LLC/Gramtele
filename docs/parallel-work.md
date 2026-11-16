@@ -263,3 +263,24 @@ Native160 repeated identical/10source hashes, map262/151done111partial refs and
 ledger/scope/diff audits PASS. Dependencies/lock unchanged; ba1c576/ef615ab preserved.
 Private XCB test and known runtime race both passed; no tg-runtime edits.
 Accounting finalized before integration/report; CI monitoring is left to the user.
+
+
+Срез port/data-user от maina236ae1, свой worktree data-user:
+[handoff](handoffs/codex-data-user.md), [карта](../crates/tg-core/docs/data-user-map.md)
+542rows380done162explicitpartial0pending;12files4754LOC2done10partial, плюс настоящие
+UnreadState/BadgesState values (остальной dialogs_common header tg-app6 partial).
+Concrete UserData/sole Peers, derived values/RPL, wire-only titles/filter rules /
+service/typed Sender/virtual timers, archive counters и keyed album model.
+01/question1/credits/08/13/14/18–20/23–29/5–6 владельцы перечислены явно; полного
+fake Session/History/Forum/TextWithEntities/UI нет. Порядок include/exclude по
+scoped key отличается от C++ allocation order; pinned order exact. Source quirks,
+включая logical&&→bit0 в Channel send value и bot-version callback phases, сохранены.
+37newtests/native183repeat-exact/20hashes. All three workspace checks PASS:
+1050successful(1046regular+4inheritedchild),0failed,3existingignored;
+/tmp/data-user-final-workspace-checks.log. Один completed full run; первый attempt
+остановлен на компиляции тестов до их запуска для исправления callback order.
+Final focused/all-target clippy/tests и native/map/refs/ledger/diff audits PASS.
+Claude files/foreign branches/manifests/lock не менялись; ba1c576/ef615ab сохранены,
+actual private XCB и известный runtime race PASS. Только свою ветку интегрировать
+через main fast-forward, atomic push main+port/data-user gramtele без force.
+CI проверяет/перезапускает пользователь; runtime не исправлять в этой задаче.

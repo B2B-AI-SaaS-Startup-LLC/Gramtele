@@ -68,3 +68,11 @@ pub mod data_passkey_deserialize;
 pub mod data_reply_preview;
 pub mod data_search_controller;
 pub mod data_streaming;
+
+pub mod data_chat_filters;
+pub mod data_chat_filters_service;
+pub mod data_folder;
+pub mod data_groups;
+pub mod data_peer_values;
+pub mod data_unread_value;
+pub mod data_user_store;

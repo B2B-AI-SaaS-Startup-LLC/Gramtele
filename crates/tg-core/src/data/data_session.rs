@@ -1,5 +1,4 @@
-//! The sole Peers store: common user slice and concrete chat/channel records.
-//! Full Data::Session and UserData remain separate future models.
+//! Sole owner of concrete User/Chat/Channel records. Full Data::Session is package13/14/29.
 pub use super::data_media_store::{Documents, Photos};
 use super::{
     data_changes::{Changes, PeerFlag},
@@ -47,6 +46,8 @@ pub enum NameFields<'a> {
     },
 }
 pub struct Peers {
+    self_user_id: Option<PeerId>,
+    pub(crate) user_effects: EventStream<super::data_user::UserEffect>,
     scope: SessionScopeId,
     alive: Weak<ScopeState>,
     pub(crate) peers: RefCell<BTreeMap<PeerId, PeerRecord>>,
@@ -72,12 +73,19 @@ impl Peers {
         assert_eq!(scope.id(), changes.session());
         Self {
             scope: scope.id(),
+            self_user_id: None,
+            user_effects: EventStream::new(),
             alive: scope.downgrade(),
             peers: RefCell::default(),
             group_effects: std::rc::Rc::new(EventStream::new()),
             changes,
             effects: EventStream::new(),
         }
+    }
+    pub fn new_with_self(scope: &SessionScope, changes: Changes, self_id: UserId) -> Self {
+        let mut result = Self::new(scope, changes);
+        result.self_user_id = Some(peer_from_user(self_id));
+        result
     }
     pub(crate) fn check_scope(&self, key: PeerKey) {
         assert!(self.alive.upgrade().is_some(), "SessionScope has ended");
@@ -96,7 +104,10 @@ impl Peers {
             } else if peer_is_channel(id) {
                 PeerRecord::Channel(Box::new(super::data_channel::ChannelData::new(p)))
             } else {
-                PeerRecord::UserBase(Box::new(p))
+                PeerRecord::User(Box::new(super::data_user::UserData::new(
+                    p,
+                    self.self_user_id == Some(id),
+                )))
             }
         });
         key
@@ -140,6 +151,21 @@ impl Peers {
             match effect {
                 PeerEffect::Updated(key, flags) => self.changes.peer_updated(key, flags),
                 PeerEffect::NameUpdated(key, letters) => self.changes.name_updated(key, letters),
+                PeerEffect::SetStoriesHidden { peer, hidden } if peer_is_user(peer.id()) => {
+                    let key = UserKey::try_from(peer).unwrap();
+                    let mut f = self.read_user(key, super::data_user::UserData::flags);
+                    if hidden {
+                        f |= super::data_user::UserDataFlag::StoriesHidden
+                    } else {
+                        f &= !super::data_user::UserDataFlags::from(
+                            super::data_user::UserDataFlag::StoriesHidden,
+                        )
+                    }
+                    self.set_user_flags(key, f).expect("Forum state unchanged");
+                }
+                PeerEffect::SetStoriesState { peer, state } if peer_is_user(peer.id()) => {
+                    self.set_user_stories_state(UserKey::try_from(peer).unwrap(), state)
+                }
                 PeerEffect::SetStoriesState { peer, state } if peer_is_channel(peer.id()) => {
                     self.set_channel_stories_state(ChannelKey::try_from(peer).unwrap(), state)
                 }
@@ -436,24 +462,23 @@ impl Peers {
     }
 }
 
-/// Concrete group records plus the already accepted user common slice. UserData
-/// itself is package02; UserBase does not pretend to be a complete UserData.
+/// Concrete records, with scoped stable identity and a single owner.
 pub(crate) enum PeerRecord {
-    UserBase(Box<PeerData>),
+    User(Box<super::data_user::UserData>),
     Chat(Box<super::data_chat::ChatData>),
     Channel(Box<super::data_channel::ChannelData>),
 }
 impl PeerRecord {
     pub(crate) fn peer(&self) -> &PeerData {
         match self {
-            Self::UserBase(p) => p,
+            Self::User(u) => &u.peer,
             Self::Chat(c) => &c.peer,
             Self::Channel(c) => &c.peer,
         }
     }
     pub(crate) fn peer_mut(&mut self) -> &mut PeerData {
         match self {
-            Self::UserBase(p) => p,
+            Self::User(u) => &mut u.peer,
             Self::Chat(c) => &mut c.peer,
             Self::Channel(c) => &mut c.peer,
         }

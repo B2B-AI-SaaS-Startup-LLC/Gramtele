@@ -15,8 +15,8 @@ TL model phases — `data_chat_updates.rs` / `data_channel_updates.rs`. Имен
 ## Владение и привязки
 
 Peers хранит один PeerRecord на scope+PeerId. ChatData/ChannelData владеют одним
-настоящим PeerData. UserBase — ранее принятый общий срез, не фиктивный UserData;
-модель UserData02 ещё отсутствует. Участники/боты/админы/миграции — scoped keys.
+настоящим PeerData. UserBase был принятым общим срезом на момент пакета03.
+В data-user он заменён concrete UserData: [карта](data-user-map.md). Участники/боты/админы/миграции — scoped keys.
 UserParticipantFields — обязательные настоящие поля UserData/бота, без Default
 или production provider-заглушки. GroupContext принимает часы, self key и реальные
 User/theme facts callbacks, Ayu filter setting приходит явно. Никакого Thread,
@@ -402,7 +402,7 @@ lifetime с вложенным callback требует настоящего owne
 | data/data_channel.h:25 | ChannelLocation equality/inequality, empty address ignores point | done | data_channel.rs::ChannelLocation::eq | scalar_wrappers_predicate_matrix_locations_and_pending_fields |
 | data/data_chat_participant_status.h:26 | Admin/Restriction enum, flags operators, options and defaults | done | data_chat_participant_status.rs | native_rights_flags_normalization_zalgo_and_forever |
 | data/data_chat_participant_status.h:248 | SendErrorWithThread actual Thread identity binding | partial(16) | Thread model not fabricated | Отложенная часть не исполнялась; boundary: can_send_any_threadless_groups_freeze_and_zero_mask |
-| data/data_session.cpp:594 | Peers::ensure/read/edit concrete Chat/Channel records + existing UserBase common slice | partial(02/13/14) | data_session.rs::PeerRecord / data_group_store.rs::ensure_chat/ensure_channel; full UserData and Session remain | Отложенная часть не исполнялась; boundary: real_records_defaults_scope_and_common_base |
+| data/data_session.cpp:594 | Peers::ensure/read/edit concrete User/Chat/Channel records | partial(13/14/29) | data_session.rs::PeerRecord / data_group_store.rs / data_user_store.rs; full Session remains | Отложенная часть не исполнялась; boundary: real_records_defaults_scope_and_common_base |
 | data/data_peer.cpp:1964 | Theme mutation with required real emoji/theme facts; no default text service | partial(5/29) | data_group_store.rs::apply_group_theme / GroupContext::theme_facts | Отложенная часть не исполнялась; boundary: tl_full_updates_apply_scalar_state_and_preserve_stale_star_flag |
 | ayu/utils/telegram_helpers.cpp:1269 | filterZalgo whole helper/pattern; other file functions excluded | partial(35) | ayu/utils/telegram_helpers.rs::filter_zalgo/is_mn; rest of file35 | Отложенная часть не исполнялась; boundary: native_rights_flags_normalization_zalgo_and_forever |
 | data/data_peer_bot_command.h:14 | BotCommand fields/equality | done | data_peer_bot_command.rs::BotCommand | reaction_and_bot_command_values_and_source_partial_updates |
